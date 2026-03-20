@@ -14,12 +14,13 @@ const Footer: React.FC = () => {
           {/* Section 1 – Follow */}
 
           <Image
-            src="/logo.png"
-            alt="logo"
-            width={200}
-            height={100}
-            className="w-40 h-auto"
-          />
+  src="/logo.png"
+  alt="Logo"
+  width={400}
+  height={400}
+  className="h-5 w-auto"
+  loading="eager"
+/>
 
           {/* Section 2 – Kontakt */}
           <div className="font-julius">
