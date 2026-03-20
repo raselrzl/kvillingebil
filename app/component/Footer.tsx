@@ -14,13 +14,13 @@ const Footer: React.FC = () => {
           {/* Section 1 – Follow */}
 
           <Image
-  src="/logo.png"
-  alt="Logo"
-  width={400}
-  height={400}
-  className="h-5 w-auto"
-  loading="eager"
-/>
+            src="/logo.png"
+            alt="Logo"
+            width={400}
+            height={400}
+            className="h-5 w-auto"
+            loading="eager"
+          />
 
           {/* Section 2 – Kontakt */}
           <div className="font-julius">
@@ -39,9 +39,7 @@ const Footer: React.FC = () => {
 
           {/* Section 3 – Företag */}
           <div className="font-julius">
-            <h3 className="text-sm font-bold mb-4 font-julius">
-              Företagsbokningar
-            </h3>
+            <h3 className="text-sm font-bold mb-4 font-julius">kontakt </h3>
 
             <a
               href="mailto:info@kvillingebil.se"
