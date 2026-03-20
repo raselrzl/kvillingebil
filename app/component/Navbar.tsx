@@ -68,8 +68,8 @@ export default function Navbar() {
             className="h-0.5 w-5 rounded bg-gray-100"
             animate={
               menuOpen
-                ? { rotate: 45, y: 8, backgroundColor: "#22c55e" }
-                : { rotate: 0, y: 0, backgroundColor: "#22c55e" }
+                ? { rotate: 45, y: 8, backgroundColor: "#cc0a39" }
+                : { rotate: 0, y: 0, backgroundColor: "#cc0a39" }
             }
             transition={{ duration: 0.3 }}
           />
