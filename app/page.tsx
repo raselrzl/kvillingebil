@@ -13,11 +13,11 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-  return (<>  <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
+  return (<>  <section className="relative w-full h-134 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Video */}
       <video
         ref={videoRef}
-        src="/kvpromo.mp4"
+        src="/karavan.mp4"
         autoPlay
         loop
         muted
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/20" />
  
 
       {/* Scroll Indicator */}
