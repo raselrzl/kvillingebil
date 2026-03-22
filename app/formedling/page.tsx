@@ -85,7 +85,7 @@ export default function FormedlingPage() {
         </section>
 
         {/* "Vi erbjuder" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-6 font-julius">
+        <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-6 font-julius text-center">
           Vi erbjuder:
         </h2>
         <div className="space-y-4">
@@ -104,7 +104,7 @@ export default function FormedlingPage() {
         </div>
 
         {/* "Fördelar för köparen" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6 font-julius">
+        <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6 font-julius text-center">
           Fördelar för köparen:
         </h2>
         <div className="space-y-4">
