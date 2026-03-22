@@ -6,12 +6,12 @@ import React from "react";
 const links = [
   {
     title: "Husbilar",
-    image: "/husbilar.jpg",
+    image: "/2.png",
     href: "/husbilar",
   },
   {
     title: "Husvagnar",
-    image: "/husvagnar.jpeg",
+    image: "/1.png",
     href: "/husvagnar",
   },
   {
@@ -57,14 +57,14 @@ const CategoryLink: React.FC = () => {
           ))}
         </div>
         <div className="mt-12 flex justify-center">
-  <Link
-    href="/fordon"
-    className="px-8 py-3 border border-black text-black text-sm uppercase tracking-wide rounded-full 
-    hover:bg-black hover:text-white transition duration-300"
-  >
-    Visa alla fordon
-  </Link>
-</div>
+          <Link
+            href="/fordon"
+            className="px-8 py-3 bg-black text-white border border-black text-sm uppercase tracking-wide rounded-full 
+    hover:bg-black/70 hover:text-white transition duration-300"
+          >
+            Visa alla fordon
+          </Link>
+        </div>
       </div>
     </section>
   );
