@@ -54,7 +54,7 @@ export async function POST(req: Request) {
 
     // Admin email (you receive)
     const adminMail = {
-      from: `"Vandrarhem Private Contact" <${process.env.SMTP_USER}>`,
+      from: `"Contact" <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_USER,
       replyTo: data.email,
       subject: `New Message: ${data.subject}`,

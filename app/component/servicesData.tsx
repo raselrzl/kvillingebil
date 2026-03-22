@@ -24,7 +24,7 @@ type ServiceItem = {
 const servicesData: ServiceItem[] = [
   {
     title: "Husvagnar",
-    icon: <Truck className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <Truck className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Stort utbud av nya och begagnade husvagnar",
       "För alla behov och budgetar",
@@ -32,7 +32,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Husbilar",
-    icon: <Car className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <Car className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Bekväma och fullt utrustade husbilar",
       "Frihet att resa när du vill",
@@ -40,7 +40,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Inköp",
-    icon: <BadgeDollarSign className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <BadgeDollarSign className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Vi köper ditt fordon snabbt",
       "Trygg och smidig affär",
@@ -48,7 +48,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Inbyte",
-    icon: <Circle className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <Circle className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Byt in ditt fordon hos oss",
       "Enkel lösning vid köp av nytt",
@@ -56,7 +56,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Försäljning",
-    icon: <BadgeDollarSign className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <BadgeDollarSign className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Sälj ditt fordon enkelt",
       "Vi hanterar hela processen",
@@ -64,7 +64,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Förmedling",
-    icon: <MessagesSquare className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <MessagesSquare className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Vi säljer ditt fordon åt dig",
       "Maximera värdet utan stress",
@@ -72,7 +72,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Verkstad",
-    icon: <ShieldCheck className="w-10 h-10 text-[#47d7ac]" />,
+    icon: <ShieldCheck className="w-10 h-10 text-[#2db1cc]" />,
     points: [
       "Service och reparationer",
       "Erfarna tekniker du kan lita på",
@@ -209,7 +209,7 @@ export default function ServicesSlider() {
                 <CircleFadingPlus
                   className={`w-4 h-4 ${
                     activeIndex === index
-                      ? "text-[#47d7ac] scale-110"
+                      ? "text-[#2db1cc] scale-110"
                       : "text-gray-300"
                   }`}
                 />

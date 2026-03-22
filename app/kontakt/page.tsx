@@ -28,12 +28,12 @@ export default function ContactOssPage() {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide">
             Kontakta oss
           </h1>
-          <div className="w-20 h-1 bg-[#47d7ac] mx-auto mt-4" />
+          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
         </motion.div>
       </section>
 
       {/* Intro text */}
-      <section className="py-12 text-center font-julius">
+      <section className="py-12 text-center font-julius bg-gray-50">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl mb-4">Vi hjälper dig gärna</h2>
           <p className="text-gray-600 text-sm md:text-base">
@@ -42,15 +42,15 @@ export default function ContactOssPage() {
           </p>
         </div>
       </section>
-
-      {/* Contact Form */}
-      <section className="py-10 bg-white">
-        <ContactForm />
-      </section>
       <section className="py-10 bg-gray-50">
         {" "}
         <ContactInfoCard />
       </section>
+      {/* Contact Form */}
+      <section className="py-10 bg-gray-50">
+        <ContactForm />
+      </section>
+
     </>
   );
 }
