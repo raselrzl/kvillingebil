@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function FormedlingPage() {
   const offers = [
@@ -26,100 +27,170 @@ export default function FormedlingPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      {/* HERO */}
+      <section className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[85vh] flex items-center justify-center bg-black">
         <video
           src="/kvpromo.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute text-center text-white px-4 sm:px-6"
+          className="text-center text-white px-4"
         >
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide font-julius">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-julius">
             Förmedling
           </h1>
-          <div className="w-16 sm:w-24 h-1 bg-[#2db1cc] mx-auto mt-4" />
+          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
         </motion.div>
       </section>
 
-      {/* Intro Text */}
-      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-6 text-gray-700 text-justify">
-        {/* Intro Text */}
-        <section className="max-w-5xl mx-auto ">
-          <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-10 shadow-sm">
-            {/* Accent line */}
-            <div className="w-12 h-1 bg-[#2db1cc] mb-6"></div>
+      {/* TITLE */}
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black font-julius text-center mt-10 px-4">
+        Smidig försäljning av din husbil eller husvagn
+      </h2>
 
-            <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-              <p>
-                På Kvillinge Bil i Norrköping har vi god erfarenhet av
-                försäljning av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
-                Vi vet vad potentiella köpare letar efter och kan framhäva ditt
-                fordons unika fördelar på ett sätt som fångar intresset hos rätt
-                målgrupp. Vi erbjuder en smidig och framgångsrik försäljning av
-                din husbil eller husvagn.
-              </p>
+      {/* INTRO + PREMIUM IMAGE STYLE */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+  <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-              <p>
-                Låt oss ta hand om marknadsföringen, förhandlingarna och allt
-                det administrativa arbetet. Du kan känna dig trygg med att vi
-                har erfarenhet och en pålitlig process för att maximera ditt
-                försäljningsresultat.
-              </p>
+    {/* IMAGES (Layered Style) */}
+    <div className="relative w-full h-[300px] sm:h-[400px]">
+      {/* Back Image */}
+      <div className="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-lg">
+        <Image
+          src="/v1.png"
+          alt="Vehicle 1"
+          fill
+          className="object-cover"
+        />
+      </div>
 
-              <p className="font-medium text-gray-900 dark:text-white">
-                Kontakta oss idag för att få veta mer om hur vi på Kvillinge Bil
-                i Norrköping kan hjälpa dig att sälja din Kabe, Adria, Swift
-                eller Hobby husbil eller husvagn!
-              </p>
+      {/* Front Image */}
+      <div className="absolute bottom-0 right-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+        <Image
+          src="/v2.png"
+          alt="Vehicle 2"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
+
+    {/* TEXT CARD */}
+    <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-md space-y-5">
+      <div className="w-12 h-1 bg-[#2db1cc]" />
+
+      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+        På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning
+        av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
+      </p>
+
+      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+        Låt oss ta hand om marknadsföringen, förhandlingarna och allt det
+        administrativa arbetet – tryggt, enkelt och effektivt.
+      </p>
+    </div>
+  </div>
+</section>
+
+      {/* LISTS */}
+      <section className="max-w-6xl mx-auto py-12 sm:py-16 space-y-10 text-gray-700">
+        {/* OFFERS */}
+        <div>
+          {/* OFFERS */}
+          <section className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-center font-julius">
+              Vi erbjuder:
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* IMAGE */}
+              <div className="relative w-full h-60 sm:h-72 md:h-full rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/v2.png" // you can change to another image if you want
+                  alt="Vi erbjuder"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* LIST (UNCHANGED STYLE) */}
+              <div className="space-y-3 sm:space-y-4">
+                {offers.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    {item}
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* "Vi erbjuder" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-6 font-julius text-center">
-          Vi erbjuder:
-        </h2>
-        <div className="space-y-4">
-          {offers.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-gray-700 dark:text-gray-200"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-            >
-              {item}
-            </motion.div>
-          ))}
+          </section>
         </div>
 
-        {/* "Fördelar för köparen" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6 font-julius text-center">
-          Fördelar för köparen:
-        </h2>
-        <div className="space-y-4">
-          {buyerBenefits.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-gray-700 dark:text-gray-200"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-            >
-              {item}
-            </motion.div>
-          ))}
+        {/* IMAGE BANNER */}
+        <div className="relative mx-6 h-48 sm:h-64 md:h-72 w-full rounded-2xl overflow-hidden shadow-lg">
+          <Image src="/v1.png" alt="Showcase" fill className="object-cover" />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg sm:text-2xl md:text-3xl font-semibold font-julius text-center px-4">
+            Fördelar för köparen
+          </div>
+        </div>
+
+        {/* BENEFITS */}
+        <div>
+          <div className="space-y-3 sm:space-y-4 mt-6 px-6">
+            {buyerBenefits.map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                {item}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="w-full px-6 my-16">
+        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-2xl px-6">
+          <div className="absolute inset-0">
+            <Image
+              src="/v2.png"
+              alt="CTA Background"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+
+          <div className="relative z-10 text-center text-white py-12 sm:py-16 px-4 sm:px-6">
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-semibold mb-4">
+              Redo att sälja ditt fordon?
+            </h3>
+
+            <p className="text-sm sm:text-base opacity-90 max-w-2xl mx-auto mb-6 sm:mb-8">
+              Vi tar hand om hela processen – från värdering till försäljning.
+            </p>
+
+            <button className="bg-[#2db1cc] hover:bg-[#249bb3] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-base transition">
+              Kontakta oss
+            </button>
+          </div>
         </div>
       </section>
     </>
