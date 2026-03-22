@@ -25,7 +25,7 @@ export default function FormedlingPage() {
   ];
 
   return (
-    <main className="font-julius">
+    <main>
 
       {/* Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
@@ -47,12 +47,12 @@ export default function FormedlingPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide">
             Förmedling
           </h1>
-          <div className="w-16 sm:w-24 h-1 bg-[#47d7ac] mx-auto mt-4" />
+          <div className="w-16 sm:w-24 h-1 bg-[#2db1cc] mx-auto mt-4" />
         </motion.div>
       </section>
 
       {/* Intro Text */}
-      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-6 text-gray-700">
+      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-6 text-gray-700 text-justify">
         <p>
           På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning av kvalitetsmärken som Kabe, Adria, Swift och Hobby. Vi vet vad potentiella köpare letar efter och kan framhäva ditt fordons unika fördelar på ett sätt som fångar intresset hos rätt målgrupp. Vi erbjuder en smidig och framgångsrik försäljning av din husbil eller husvagn.
         </p>
@@ -71,7 +71,7 @@ export default function FormedlingPage() {
           {offers.map((item, index) => (
             <motion.div
               key={index}
-              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#47d7ac] px-4 py-2 text-gray-700 dark:text-gray-200"
+              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-gray-700 dark:text-gray-200"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function FormedlingPage() {
           {buyerBenefits.map((item, index) => (
             <motion.div
               key={index}
-              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#47d7ac] px-4 py-2 text-gray-700 dark:text-gray-200"
+              className="flex items-start bg-gray-50 dark:bg-gray-800 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-gray-700 dark:text-gray-200"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
