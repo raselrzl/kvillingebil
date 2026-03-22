@@ -27,7 +27,7 @@ export default function FloatingButton() {
     },
     {
       label: "Boka tid",
-      href: "/vandrarhem/bokning#booking",
+      href: "/kontakt#contact-booking",
       icon: CalendarCheck,
     },
   ];
