@@ -25,8 +25,7 @@ export default function FormedlingPage() {
   ];
 
   return (
-    <main>
-
+    <>
       {/* Hero Section */}
       <section className="relative w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
@@ -44,7 +43,7 @@ export default function FormedlingPage() {
           transition={{ duration: 0.8 }}
           className="absolute text-center text-white px-4 sm:px-6"
         >
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide font-julius">
             Förmedling
           </h1>
           <div className="w-16 sm:w-24 h-1 bg-[#2db1cc] mx-auto mt-4" />
@@ -53,20 +52,42 @@ export default function FormedlingPage() {
 
       {/* Intro Text */}
       <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-6 text-gray-700 text-justify">
-        <p>
-          På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning av kvalitetsmärken som Kabe, Adria, Swift och Hobby. Vi vet vad potentiella köpare letar efter och kan framhäva ditt fordons unika fördelar på ett sätt som fångar intresset hos rätt målgrupp. Vi erbjuder en smidig och framgångsrik försäljning av din husbil eller husvagn.
-        </p>
+        {/* Intro Text */}
+        <section className="max-w-5xl mx-auto ">
+          <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-10 shadow-sm">
+            {/* Accent line */}
+            <div className="w-12 h-1 bg-[#2db1cc] mb-6"></div>
 
-        <p>
-          Låt oss ta hand om marknadsföringen, förhandlingarna och allt det administrativa arbetet. Du kan känna dig trygg med att vi har erfarenhet och en pålitlig process för att maximera ditt försäljningsresultat.
-        </p>
+            <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+              <p>
+                På Kvillinge Bil i Norrköping har vi god erfarenhet av
+                försäljning av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
+                Vi vet vad potentiella köpare letar efter och kan framhäva ditt
+                fordons unika fördelar på ett sätt som fångar intresset hos rätt
+                målgrupp. Vi erbjuder en smidig och framgångsrik försäljning av
+                din husbil eller husvagn.
+              </p>
 
-        <p>
-          Kontakta oss idag för att få veta mer om hur vi på Kvillinge Bil i Norrköping kan hjälpa dig att sälja din Kabe, Adria, Swift eller Hobby husbil eller husvagn!
-        </p>
+              <p>
+                Låt oss ta hand om marknadsföringen, förhandlingarna och allt
+                det administrativa arbetet. Du kan känna dig trygg med att vi
+                har erfarenhet och en pålitlig process för att maximera ditt
+                försäljningsresultat.
+              </p>
+
+              <p className="font-medium text-gray-900 dark:text-white">
+                Kontakta oss idag för att få veta mer om hur vi på Kvillinge Bil
+                i Norrköping kan hjälpa dig att sälja din Kabe, Adria, Swift
+                eller Hobby husbil eller husvagn!
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* "Vi erbjuder" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-6">Vi erbjuder:</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-6 font-julius">
+          Vi erbjuder:
+        </h2>
         <div className="space-y-4">
           {offers.map((item, index) => (
             <motion.div
@@ -83,7 +104,9 @@ export default function FormedlingPage() {
         </div>
 
         {/* "Fördelar för köparen" Section */}
-        <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6">Fördelar för köparen:</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6 font-julius">
+          Fördelar för köparen:
+        </h2>
         <div className="space-y-4">
           {buyerBenefits.map((item, index) => (
             <motion.div
@@ -99,6 +122,6 @@ export default function FormedlingPage() {
           ))}
         </div>
       </section>
-    </main>
+    </>
   );
 }
