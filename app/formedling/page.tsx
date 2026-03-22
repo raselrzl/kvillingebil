@@ -28,7 +28,7 @@ export default function FormedlingPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[85vh] flex items-center justify-center bg-black">
+      <section className="relative w-full h-124 sm:h-134 lg:h-144 flex items-center justify-center bg-black">
         <video
           src="/kvpromo.mp4"
           autoPlay
@@ -57,87 +57,99 @@ export default function FormedlingPage() {
       </h2>
 
       {/* INTRO + PREMIUM IMAGE STYLE */}
-<section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-  <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* IMAGES (Layered Style) */}
+          <div className="relative w-full h-[300px] sm:h-[400px]">
+            {/* Back Image */}
+            <div className="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/v1.png"
+                alt="Vehicle 1"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-    {/* IMAGES (Layered Style) */}
-    <div className="relative w-full h-[300px] sm:h-[400px]">
-      {/* Back Image */}
-      <div className="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-lg">
-        <Image
-          src="/v1.png"
-          alt="Vehicle 1"
-          fill
-          className="object-cover"
-        />
-      </div>
+            {/* Front Image */}
+            <div className="absolute bottom-0 right-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src="/v2.png"
+                alt="Vehicle 2"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
 
-      {/* Front Image */}
-      <div className="absolute bottom-0 right-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-        <Image
-          src="/v2.png"
-          alt="Vehicle 2"
-          fill
-          className="object-cover"
-        />
-      </div>
-    </div>
+          {/* TEXT CARD */}
+          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-md space-y-5">
+            <div className="w-12 h-1 bg-[#2db1cc]" />
 
-    {/* TEXT CARD */}
-    <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-md space-y-5">
-      <div className="w-12 h-1 bg-[#2db1cc]" />
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning
+              av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
+            </p>
 
-      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-        På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning
-        av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
-      </p>
-
-      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-        Låt oss ta hand om marknadsföringen, förhandlingarna och allt det
-        administrativa arbetet – tryggt, enkelt och effektivt.
-      </p>
-    </div>
-  </div>
-</section>
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              Låt oss ta hand om marknadsföringen, förhandlingarna och allt det
+              administrativa arbetet – tryggt, enkelt och effektivt.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* LISTS */}
       <section className="max-w-6xl mx-auto py-12 sm:py-16 space-y-10 text-gray-700">
-        {/* OFFERS */}
-        <div>
-          {/* OFFERS */}
-          <section className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-center font-julius">
-              Vi erbjuder:
-            </h2>
+        <section className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* IMAGE WITH TITLE OVERLAY */}
+            <div className="relative w-full h-64 sm:h-80 md:h-full rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/v2.png"
+                alt="Vi erbjuder"
+                fill
+                className="object-cover"
+              />
 
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* IMAGE */}
-              <div className="relative w-full h-60 sm:h-72 md:h-full rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/v2.png" // you can change to another image if you want
-                  alt="Vi erbjuder"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* LIST (UNCHANGED STYLE) */}
-              <div className="space-y-3 sm:space-y-4">
-                {offers.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    {item}
-                  </motion.div>
-                ))}
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-julius text-center px-4">
+                  Vi erbjuder
+                </h2>
               </div>
             </div>
-          </section>
-        </div>
+
+           {/* LIST WITH CHECKMARK SVG */}
+<div className="space-y-3 sm:space-y-4">
+  {offers.map((item, index) => (
+    <motion.div
+      key={index}
+      className="flex items-center bg-[#2db1cc]/20 rounded-full px-4 py-2 text-sm sm:text-base"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: index * 0.05 }}
+    >
+      {/* SVG Checkmark */}
+      <svg
+        className="w-5 h-5 mr-3 flex-shrink-0"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#2db1cc"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M20 6L9 17l-5-5" />
+      </svg>
+
+      {/* List text */}
+      <span>{item}</span>
+    </motion.div>
+  ))}
+</div>
+          </div>
+        </section>
 
         {/* IMAGE BANNER */}
         <div className="relative mx-6 h-48 sm:h-64 md:h-72 w-full rounded-2xl overflow-hidden shadow-lg">
@@ -149,11 +161,11 @@ export default function FormedlingPage() {
 
         {/* BENEFITS */}
         <div>
-          <div className="space-y-3 sm:space-y-4 mt-6 px-6">
+          <div className="space-y-3 sm:space-y-4 mt-6 px-6 max-w-4xl mx-auto">
             {buyerBenefits.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 rounded-l-full border-l-4 border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
+                className=" rounded-full border-l-4 bg-[#2db1cc]/20  border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
