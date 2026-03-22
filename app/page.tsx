@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
+import CategoryLink from "./component/categoryLink";
+import ServicesSlider from "./component/servicesData";
 
 const HomePage: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -11,8 +13,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-  return (
-    <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
+  return (<>  <section className="relative w-full h-124 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -40,6 +41,12 @@ const HomePage: React.FC = () => {
         </div>
       </motion.div>
     </section>
+  
+  <CategoryLink />
+  <ServicesSlider />
+  
+  </>
+  
   );
 };
 
