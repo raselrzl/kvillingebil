@@ -44,7 +44,7 @@ export default function FormedlingPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center text-white px-4"
         >
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-julius">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-inter">
             Förmedling
           </h1>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
@@ -52,7 +52,7 @@ export default function FormedlingPage() {
       </section>
 
       {/* TITLE */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black font-julius text-center mt-10 px-4">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black font-inter text-center mt-10 px-4">
         Smidig försäljning av din husbil eller husvagn
       </h2>
 
@@ -60,7 +60,7 @@ export default function FormedlingPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* IMAGES (Layered Style) */}
-          <div className="relative w-full h-[300px] sm:h-[400px]">
+          <div className="relative w-full h-75 sm:h-100">
             {/* Back Image */}
             <div className="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-lg">
               <Image
@@ -114,47 +114,47 @@ export default function FormedlingPage() {
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-julius text-center px-4">
+                <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-inter text-center px-4">
                   Vi erbjuder
                 </h2>
               </div>
             </div>
 
-           {/* LIST WITH CHECKMARK SVG */}
-<div className="space-y-3 sm:space-y-4">
-  {offers.map((item, index) => (
-    <motion.div
-      key={index}
-      className="flex items-center bg-[#2db1cc]/20 rounded-full px-4 py-2 text-sm sm:text-base"
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.05 }}
-    >
-      {/* SVG Checkmark */}
-      <svg
-        className="w-5 h-5 mr-3 flex-shrink-0"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#2db1cc"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M20 6L9 17l-5-5" />
-      </svg>
+            {/* LIST WITH CHECKMARK SVG */}
+            <div className="space-y-3 sm:space-y-4">
+              {offers.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center bg-[#2db1cc]/20 rounded-full px-4 py-2 text-sm sm:text-base"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  {/* SVG Checkmark */}
+                  <svg
+                    className="w-5 h-5 mr-3 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2db1cc"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
 
-      {/* List text */}
-      <span>{item}</span>
-    </motion.div>
-  ))}
-</div>
+                  {/* List text */}
+                  <span>{item}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* IMAGE BANNER */}
         <div className="relative mx-6 h-48 sm:h-64 md:h-72 w-full rounded-2xl overflow-hidden shadow-lg">
           <Image src="/v1.png" alt="Showcase" fill className="object-cover" />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg sm:text-2xl md:text-3xl font-semibold font-julius text-center px-4">
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg sm:text-2xl md:text-3xl font-semibold font-inter text-center px-4">
             Fördelar för köparen
           </div>
         </div>

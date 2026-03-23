@@ -7,7 +7,7 @@ import SocialLinks from "./SocialLinks";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-black text-white px-2 font-inter border-t font-julius border-gray-800">
+    <footer className="w-full bg-black text-white px-2 font-inter border-t font-inter border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-4">
         {/* Grid: 1 column mobile / 2 tablet / 4 desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -23,14 +23,14 @@ const Footer: React.FC = () => {
           />
 
           {/* Section 2 – Kontakt */}
-          <div className="font-julius">
-            <h3 className="text-sm font-bold mb-2 font-julius">
+          <div className="font-inter">
+            <h3 className="text-sm font-bold mb-2 font-inter">
               Kvillinge bil AB
             </h3>
             <div className="flex items-start gap-2">
               <MapPin size={14} className="text-gray-100 mt-1" />
 
-              <p className="text-xs text-gray-300 leading-relaxed font-julius">
+              <p className="text-xs text-gray-300 leading-relaxed font-inter">
                 Suffer 1<br />
                 60599 Åby, Norrköping
               </p>
@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Section 3 – Företag */}
-          <div className="font-julius">
-            <h3 className="text-sm font-bold mb-4 font-julius">kontakt </h3>
+          <div className="font-inter">
+            <h3 className="text-sm font-bold mb-4 font-inter">kontakt </h3>
 
             <a
               href="mailto:info@kvillingebil.se"
@@ -61,8 +61,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Section 4 – Övrigt */}
-          <div className="font-julius">
-            <h3 className="text-sm font-bold mb-2 font-julius">Info</h3>
+          <div className="font-inter">
+            <h3 className="text-sm font-bold mb-2 font-inter">Info</h3>
             <Link
               href="/privacy-policy"
               className="block text-gray-300 underline text-xs font-bold hover:text-white transition"
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Copyright + Support */}
-          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left font-julius">
+          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left font-inter">
             © {new Date().getFullYear()} Kvillinge bil AB{" "}
             <a
               href="https://www.souveral.com/"

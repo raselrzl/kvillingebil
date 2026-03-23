@@ -23,7 +23,7 @@ export default function NotFound() {
           transition={{ duration: 0.8 }}
           className="text-center text-white px-6"
         >
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-widest font-julius">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-widest font-inter">
             404
           </h1>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4 rounded-full" />

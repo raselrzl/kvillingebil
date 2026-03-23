@@ -70,7 +70,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="font-julius w-full px-4 sm:px-6 md:px-8">
+    <section className="font-inter w-full px-4 sm:px-6 md:px-8">
       <div className="max-w-2xl mx-auto bg-gray-50 pb-8 px-4">
         <form className="space-y-2 md:space-y-6" onSubmit={handleSubmit} id="contact-booking">
           <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
@@ -152,7 +152,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-[#2db1cc] hover:bg-[#36b795] text-white font-julius font-semibold text-xs rounded-full py-2 sm:py-3 transition"
+            className="w-full bg-[#2db1cc] hover:bg-[#36b795] text-white font-inter font-semibold text-xs rounded-full py-2 sm:py-3 transition"
           >
             Skicka
           </button>

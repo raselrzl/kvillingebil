@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ContactInfoCard() {
   return (
-    <section className="w-full dark:bg-gray-900 py-16 font-julius">
+    <section className="w-full dark:bg-gray-900 py-16 font-inter">
       <div className="max-w-6xl mx-auto px-6">
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 overflow-hidden grid md:grid-cols-2">
 
@@ -34,7 +34,7 @@ export default function ContactInfoCard() {
               <h2 className="text-2xl md:text-3xl font-bold">
                 Kontakta oss
               </h2>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-600 mt-2 text-sm font-inter">
                 Har du frågor om husbilar, husvagnar eller vill sälja ditt fordon?
                 Hör av dig så hjälper vi dig.
               </p>

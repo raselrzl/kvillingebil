@@ -140,7 +140,7 @@ export default function ServicesSlider() {
   }, [cardWidth]);
 
   return (
-    <section className="py-10 bg-gray-100 font-julius">
+    <section className="py-10 bg-gray-100 font-inter">
       <div className="max-w-7xl mx-auto px-6 relative">
 
         {/* Heading */}

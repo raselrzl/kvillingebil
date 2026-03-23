@@ -1,0 +1,99 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+export default function AboutUsPage() {
+  return (
+    <>
+      {/* HERO SECTION (UNCHANGED) */}
+      <section className="relative font-inter w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+        <video
+          src="/karavan.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center"
+        >
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide">
+            Om oss
+          </h1>
+          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4 rounded-full" />
+        </motion.div>
+      </section>
+
+      {/* INTRO / MAIN TEXT */}
+      <section className="py-20 bg-gray-50 font-inter">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+
+          {/* IMAGE */}
+          <div className="md:col-span-6 relative h-80 md:h-125">
+            <Image
+              src="/husvagnar.jpeg"
+              alt="Kvillinge Bil gård"
+              fill
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
+
+          {/* TEXT */}
+          <div className="md:col-span-6 flex flex-col justify-center space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+              Frihet på vägarna med <span className="text-[#2db1cc]">Kvillinge Bil</span>
+            </h2>
+
+            <p>
+              Hos <span className="font-semibold">Kvillinge Bil</span> hjälper vi dig att hitta frihet på vägarna med kvalitativa husbilar och husvagnar. Verksamheten drivs från en vacker gård i Norrköping, där personlig service och stort engagemang står i fokus.
+            </p>
+
+            <p>
+              Vi erbjuder förmedling, inbyten, inköp och noggrant utvalda fritidsfordon som passar alla behov – oavsett om du planerar längre äventyr eller sköna helgresor.
+            </p>
+
+            <p>
+              Med vår erfarenhet och passion för branschen hjälper vi dig att göra rätt val och skapa minnen för livet.
+            </p>
+
+            <p className="font-semibold text-[#2db1cc] text-lg md:text-xl">
+              Välkommen till Kvillinge Bil – låt oss ta hand om din nästa resa!
+            </p>
+
+            <a
+              href="/kontakt"
+              className="mt-4 inline-block px-8 py-3 bg-[#2db1cc] text-white rounded-full text-sm font-medium shadow-lg hover:bg-[#36b795] transition"
+            >
+              Kontakta oss
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* STATS / TRUST SECTION */}
+      <section className="py-20 bg-white font-inter">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          {[
+            { number: "10+", label: "År erfarenhet" },
+            { number: "100+", label: "Sålda fordon" },
+            { number: "100%", label: "Personlig service" },
+            { number: "∞", label: "Resmöjligheter" },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-5xl font-extrabold text-[#2db1cc]">{item.number}</h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}

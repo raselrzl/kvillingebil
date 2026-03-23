@@ -8,7 +8,7 @@ export default function ContactOssPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative font-julius w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative font-inter w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
           src="/v12.mp4"
           autoPlay
@@ -33,7 +33,7 @@ export default function ContactOssPage() {
       </section>
 
       {/* Intro text */}
-      <section className="py-12 text-center font-julius bg-gray-50">
+      <section className="py-12 text-center font-inter bg-gray-50">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl mb-4">Vi hjälper dig gärna</h2>
           <p className="text-gray-600 text-sm md:text-base">
