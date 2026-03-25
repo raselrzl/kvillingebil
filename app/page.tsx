@@ -43,6 +43,22 @@ const HomePage: React.FC = () => {
     </section>
   
   <CategoryLink />
+    {/* STATS / TRUST SECTION */}
+      <section className="py-20 bg-white font-inter">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          {[
+            { number: "10+", label: "År erfarenhet" },
+            { number: "100+", label: "Sålda fordon" },
+            { number: "100%", label: "Personlig service" },
+            { number: "∞", label: "Resmöjligheter" },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <h3 className="text-4xl md:text-5xl font-extrabold text-[#2db1cc]">{item.number}</h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
   <ServicesSlider />
   
   </>
