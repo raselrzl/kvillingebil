@@ -34,10 +34,9 @@ export default function AboutUsPage() {
 
       {/* INTRO / MAIN TEXT */}
       <section className="py-20 bg-gray-50 font-inter">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-stretch">
           {/* IMAGE */}
-          <div className="md:col-span-6 relative h-80 md:h-125">
+          <div className="md:col-span-6 relative h-full min-h-75">
             <Image
               src="/husvagnar.jpeg"
               alt="Kvillinge Bil gård"
@@ -46,36 +45,59 @@ export default function AboutUsPage() {
             />
           </div>
 
-          {/* TEXT */}
-          <div className="md:col-span-6 flex flex-col justify-center space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Frihet på vägarna med <span className="text-[#2db1cc]">Kvillinge Bil</span>
-            </h2>
+          <div className="md:col-span-6 flex flex-col justify-center">
+            <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10 space-y-6">
+              {/* Top accent */}
+              <div className="w-14 h-1 bg-[#2db1cc] rounded-full" />
 
-            <p>
-              Hos <span className="font-semibold">Kvillinge Bil</span> hjälper vi dig att hitta frihet på vägarna med kvalitativa husbilar och husvagnar. Verksamheten drivs från en vacker gård i Norrköping, där personlig service och stort engagemang står i fokus.
-            </p>
+              {/* Heading */}
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 leading-snug">
+                Frihet på vägarna med{" "}
+                <span className="text-[#2db1cc]">Kvillinge Bil</span>
+              </h2>
 
-            <p>
-              Vi erbjuder förmedling, inbyten, inköp och noggrant utvalda fritidsfordon som passar alla behov – oavsett om du planerar längre äventyr eller sköna helgresor.
-            </p>
+              {/* Intro */}
+              <p className="text-gray-700 leading-relaxed">
+                Hos <span className="font-semibold">Kvillinge Bil</span> hjälper
+                vi dig att hitta frihet på vägarna med kvalitativa husbilar och
+                husvagnar. Verksamheten drivs från en vacker gård i Norrköping,
+                där personlig service och stort engagemang står i fokus.
+              </p>
 
-            <p>
-              Med vår erfarenhet och passion för branschen hjälper vi dig att göra rätt val och skapa minnen för livet.
-            </p>
+              {/* Divider */}
+              <div className="h-px bg-gray-200" />
 
-            <p className="font-semibold text-[#2db1cc] text-lg md:text-xl">
-              Välkommen till Kvillinge Bil – låt oss ta hand om din nästa resa!
-            </p>
+              {/* Body */}
+              <p className="text-gray-700 leading-relaxed">
+                Vi erbjuder förmedling, inbyten, inköp och noggrant utvalda
+                fritidsfordon som passar alla behov – oavsett om du planerar
+                längre äventyr eller sköna helgresor.
+              </p>
 
-            <a
-              href="/kontakt"
-              className="mt-4 inline-block px-8 py-3 bg-[#2db1cc] text-white rounded-full text-sm font-medium shadow-lg hover:bg-[#36b795] transition"
-            >
-              Kontakta oss
-            </a>
+              <p className="text-gray-700 leading-relaxed">
+                Med vår erfarenhet och passion för branschen hjälper vi dig att
+                göra rätt val och skapa minnen för livet.
+              </p>
+
+              {/* Highlight */}
+              <div className="bg-[#2db1cc]/10 border-l-4 border-[#2db1cc] p-4 rounded-lg">
+                <p className="font-semibold text-gray-800">
+                  Välkommen till Kvillinge Bil – låt oss ta hand om din nästa
+                  resa!
+                </p>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-2">
+                <a
+                  href="/kontakt"
+                  className="inline-block px-8 py-3 bg-[#2db1cc] text-white rounded-full text-sm font-medium shadow-lg hover:bg-[#249bb3] transition"
+                >
+                  Kontakta oss
+                </a>
+              </div>
+            </div>
           </div>
-
         </div>
       </section>
 
@@ -89,8 +111,12 @@ export default function AboutUsPage() {
             { number: "∞", label: "Resmöjligheter" },
           ].map((item, i) => (
             <div key={i} className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#2db1cc]">{item.number}</h3>
-              <p className="text-gray-600 mt-2 text-sm md:text-base">{item.label}</p>
+              <h3 className="text-4xl md:text-5xl font-extrabold text-[#2db1cc]">
+                {item.number}
+              </h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">
+                {item.label}
+              </p>
             </div>
           ))}
         </div>
