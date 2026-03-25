@@ -22,20 +22,20 @@ export default function WorkshopPagePremium() {
       {/* HERO */}
       <section className="relative w-full h-130 sm:h-150 lg:h-175 flex items-center justify-center bg-linear-to-r from-gray-900 via-black to-gray-900">
         <video
-          src="/kv1.mp4"
+          src="/w.mp4"
           autoPlay
           loop
           muted
           playsInline
           className="absolute w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 bg-black/50" />
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center text-white px-4"
-        >
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center"
+     >
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inter tracking-wide">
             Verkstad & Service
           </h1>

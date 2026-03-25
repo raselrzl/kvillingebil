@@ -30,7 +30,7 @@ export default function FormedlingPage() {
       {/* HERO */}
       <section className="relative w-full h-124 sm:h-134 lg:h-144 flex items-center justify-center bg-black">
         <video
-          src="/kvpromo.mp4"
+          src="/kv2.mp4"
           autoPlay
           loop
           muted

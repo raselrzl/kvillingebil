@@ -10,7 +10,7 @@ export default function ContactOssPage() {
       {/* Hero Section */}
       <section className="relative font-inter w-full h-120 sm:h-130 2xl:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
-          src="/v12.mp4"
+          src="/kvpromo.mp4"
           autoPlay
           loop
           muted
