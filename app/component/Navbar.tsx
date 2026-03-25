@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Förmedling", href: "/formedling" },
-    { name: "Om oss", href: "/om-oss" },
+ /*    { name: "Om oss", href: "/om-oss" }, */
     { name: "Alla fordon", href: "/fordon" },
     { name: "Verkstad", href: "/verkstad" },
     { name: "Kontakta oss", href: "/kontakt" },
