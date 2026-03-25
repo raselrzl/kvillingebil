@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import MapCom from "../component/MapCom";
 
 export default function AboutUsPage() {
   return (
@@ -79,7 +80,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* STATS / TRUST SECTION */}
-      <section className="py-20 bg-white font-inter">
+      <section className="py-20 bg-gray-50 font-inter">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { number: "10+", label: "År erfarenhet" },
@@ -94,6 +95,7 @@ export default function AboutUsPage() {
           ))}
         </div>
       </section>
+      <MapCom />
     </>
   );
 }
