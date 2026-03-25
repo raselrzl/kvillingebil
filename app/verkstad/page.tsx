@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WorkshopPagePremium() {
    const services = [
@@ -117,9 +118,9 @@ export default function WorkshopPagePremium() {
           <p className="text-white opacity-90 mb-8 text-base sm:text-lg">
             Kontakta oss idag och boka service eller reparation av ditt fordon.
           </p>
-          <button className="bg-linear-to-r from-[#2db1cc] to-[#249bb3] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg">
+          <Link href="/kontakt#contact-booking" className="bg-linear-to-r from-[#2db1cc] to-[#249bb3] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg">
             Boka service
-          </button>
+          </Link>
         </div>
       </section>
     </>
