@@ -60,13 +60,12 @@ export default function FloatingButton() {
         onClick={() => setOpen(!open)}
         className="rounded-full shadow-lg hover:scale-110 transition"
       >
-        <Image
-          src={open ? "/marcus.jpeg" : "/marcus.jpeg"}
+        <img
+          src={open ? "/hello.gif" : "/hello.gif"}
           alt="Contact support"
-          unoptimized
           width={60}
           height={60}
-          className="rounded-full h-10 w-10 object-fill"
+          className="h-10 w-10 object-fill"
         />
       </button>
     </div>
