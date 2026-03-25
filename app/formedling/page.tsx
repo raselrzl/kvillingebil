@@ -106,7 +106,7 @@ export default function FormedlingPage() {
             {/* IMAGE WITH TITLE OVERLAY */}
             <div className="relative w-full h-64 sm:h-80 md:h-full rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/v2.png"
+                src="/3.png"
                 alt="Vi erbjuder"
                 fill
                 className="object-cover"
