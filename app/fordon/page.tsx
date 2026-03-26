@@ -33,17 +33,17 @@ export default function VehiclesPage() {
       <HeroCarousel vehicles={newVehicles} />
 
       <section className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800" id="husbilar">Husbilar</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2db1cc] md:text-right mb-4 uppercase" id="husbilar">Husbilar</h2>
         <HusbilarSlider vehicles={vehicles.filter(v => v.category === "Husbilar")} />
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800" id="husvagnar">Husvagnar</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2db1cc] mb-4 uppercase md:text-right" id="husvagnar">Husvagnar</h2>
         <HusvagnarSlider vehicles={vehicles.filter(v => v.category === "Husvagnar")} />
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800" id="vateranbilar">Veteranbilar</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2db1cc] mb-4 uppercase md:text-right" id="vateranbilar">Veteranbilar</h2>
         <VeteranbilarSlider vehicles={vehicles.filter(v => v.category === "Veteranbilar")} />
       </section>
     </div>
