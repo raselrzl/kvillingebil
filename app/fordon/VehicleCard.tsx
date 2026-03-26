@@ -26,7 +26,7 @@ export interface CarouselVehicle {
 // Vehicle Card
 const VehicleCard: React.FC<VehicleCardProps> = ({ title, price, image, isNew, link }) => {
   return (
-    <div className="relative rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition cursor-pointer group h-80 md:h-96">
+    <div className="relative rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition cursor-pointer group h-100 md:h-110">
       <Image src={image} alt={title} fill className="object-cover w-full h-full rounded-xl" />
       <div className="absolute inset-0 bg-black/20 transition duration-300 group-hover:bg-black/10" />
       <div className="absolute bottom-4 left-4 bg-black/40 backdrop-blur-md rounded-lg px-4 py-2 shadow-md">

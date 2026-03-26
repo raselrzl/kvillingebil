@@ -7,17 +7,17 @@ const links = [
   {
     title: "Husbilar",
     image: "/2.png",
-    href: "/husbilar",
+    href: "/fordon#husbilar",
   },
   {
     title: "Husvagnar",
     image: "/1.png",
-    href: "/husvagnar",
+    href: "/fordon#husvagnar",
   },
   {
     title: "Veteranbilar",
     image: "/veteranbilar.jpeg",
-    href: "/veteranbilar",
+    href: "/fordon#vateranbilar",
   },
 ];
 const CategoryLink: React.FC = () => {
