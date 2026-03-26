@@ -28,33 +28,32 @@ export default function FormedlingPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-124 sm:h-134 lg:h-144 flex items-center justify-center bg-black">
+      <section className="relative w-full h-130 sm:h-140 lg:h-150 flex items-center justify-center bg-black">
+        {/* VIDEO */}
         <video
           src="/kv2.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black/60" />
 
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/60 z-10 " />
+
+        {/* TEXT (FORCE ABOVE) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center text-white px-4"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-center text-white px-4 w-full"
         >
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-inter">
-            Förmedling
+            Smidig försäljning av din husbil eller husvagn
           </h1>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
         </motion.div>
       </section>
-
-      {/* TITLE */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black font-inter text-center mt-10 px-4">
-        Smidig försäljning av din husbil eller husvagn
-      </h2>
 
       {/* INTRO + PREMIUM IMAGE STYLE */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">

@@ -73,8 +73,8 @@ export default function ContactForm() {
     <section className="font-inter w-full px-4 sm:px-6 md:px-8">
       <div className="max-w-2xl mx-auto bg-gray-50 pb-8 px-4">
         <form className="space-y-2 md:space-y-6" onSubmit={handleSubmit} id="contact-booking">
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-            <User className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+          <div className="flex items-center gap-3 bg-gray-100 rounded-xl p-3">
+            <User className="w-5 h-5 text-gray-500" />
             <input
               type="text"
               name="name"

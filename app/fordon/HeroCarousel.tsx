@@ -19,7 +19,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ vehicles }) => {
   }, [vehicles.length]);
 
   return (
-    <div className="relative w-full h-120 sm:h-130 lg:h-140 overflow-hidden shadow-2xl">
+    <div className="relative w-full h-130 sm:h-140 lg:h-150 overflow-hidden shadow-2xl">
       <AnimatePresence initial={false}>
         {vehicles.map((v, idx) =>
           idx === currentIndex ? (

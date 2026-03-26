@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       {" "}
-      <section className="relative w-full h-134 sm:h-134 2xl:h-164 flex items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative w-full h-130 sm:h-140 2xl:h-150 flex items-center justify-center overflow-hidden bg-black text-white">
         {/* Background Video */}
         <video
           ref={videoRef}

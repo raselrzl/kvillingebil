@@ -6,19 +6,15 @@ import VeteranbilarSlider from "./VeteranbilarSlider";
 
 export default function VehiclesPage() {
     const vehicles: VehicleCardProps[] = [
-    { id: "1", title: "Husbilar 1", price: "500 000 kr", details: "4 bäddar, 2.3L Diesel", category: "Husbilar", image: "/car/v1.jpeg", isNew: true, link: "/fordon/1" },
-    { id: "2", title: "Husbilar 2", price: "520 000 kr", details: "5 bäddar, 2.5L Diesel", category: "Husbilar", image: "/car/v2.jpeg", isNew: true, link: "/fordon/2" },
-    { id: "3", title: "Husbilar 3", price: "480 000 kr", details: "3 bäddar, 2.0L Diesel", category: "Husbilar", image: "/car/v3.jpg", link: "/fordon/3" },
-    { id: "4", title: "Husbilar 4", price: "510 000 kr", details: "4 bäddar, 2.3L Diesel", category: "Husbilar", image: "/car/v4.jpg", link: "/fordon/4" },
-    { id: "5", title: "Husvagnar 1", price: "300 000 kr", details: "2 bäddar, kompakt modell", category: "Husvagnar", image: "/car/v5.jpg", link: "/fordon/5" },
-    { id: "6", title: "Husvagnar 2", price: "320 000 kr", details: "3 bäddar, med kök", category: "Husvagnar", image: "/car/v6.jpg", isNew: true, link: "/fordon/6" },
-    { id: "7", title: "Husvagnar 3", price: "280 000 kr", details: "2 bäddar, kompakt modell", category: "Husvagnar", image: "/car/v7.jpg", link: "/fordon/7" },
-    { id: "8", title: "Husvagnar 4", price: "350 000 kr", details: "4 bäddar, familjemodell", category: "Husvagnar", image: "/car/v8.jpg", link: "/fordon/8" },
-    { id: "9", title: "Veteranbilar 1", price: "750 000 kr", details: "Classic 1965, restaurerad", category: "Veteranbilar", image: "/car/v10.jpeg", link: "/fordon/9" },
-    { id: "10", title: "Veteranbilar 2", price: "800 000 kr", details: "Classic 1970, limited edition", category: "Veteranbilar", image: "/car/v10.jpeg", link: "/fordon/10" },
-    { id: "11", title: "Veteranbilar 3", price: "700 000 kr", details: "Classic 1960, fully restored", category: "Veteranbilar", image: "/car/v11.jpeg", link: "/fordon/11" },
-    { id: "12", title: "Veteranbilar 4", price: "900 000 kr", details: "Classic 1975, mint condition", category: "Veteranbilar", image: "/car/v12.jpg", isNew: true, link: "/fordon/12" },
-  ];
+    { id: "1", title: "Kabe Royal Hacienda 1000 TDL", price: "359,000 kr", details: "4 bäddar, 2.3L Diesel", category: "Husbilar", image: "/car/v1.jpeg", isNew: true, link: "/fordon/1" },
+    { id: "2", title: "Kabe IMPERIAL 740 TDL Långbäddar Alko", price: "520 000 kr", details: "5 bäddar, 2.5L Diesel", category: "Husbilar", image: "/car/v2.jpeg", isNew: true, link: "/fordon/2" },
+    { id: "3", title: "Solifer S4", price: "95, 000 kr", details: "3 bäddar, 2.0L Diesel", category: "Husbilar", image: "/car/v3.jpg", link: "/fordon/3" },
+    { id: "4", title: "Burstner T710", price: "419, 000 kr", details: "4 bäddar, 2.3L Diesel", category: "Husbilar", image: "/car/v4.jpg", link: "/fordon/4" },
+    { id: "5", title: "Chausson C636 B-card slots", price: "549, 000 kr", details: "2 bäddar, kompakt modell", category: "Husvagnar", image: "/car/v5.jpg", link: "/fordon/5" },
+    { id: "6", title: "Cable TM 740 LTD", price: "589, 000 kr", details: "3 bäddar, med kök", category: "Husvagnar", image: "/car/v6.jpg", isNew: true, link: "/fordon/6" },
+    { id: "7", title: "Adria Adora 573 PT", price: "329 000 kr", details: "2 bäddar, kompakt modell", category: "Husvagnar", image: "/car/v7.jpg", link: "/fordon/7" },
+    { id: "8", title: "Volvo PV444", price: "49, 000 kr", details: "4 bäddar, familjemodell", category: "Veteranbilar", image: "/veteranbilar.jpeg", link: "/fordon/8" },
+    ];
 
   const newVehicles: CarouselVehicle[] = vehicles.filter(v => v.isNew).map(v => ({
     id: v.id,
