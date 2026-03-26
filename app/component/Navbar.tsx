@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Förmedling", href: "/formedling" },
- /*    { name: "Om oss", href: "/om-oss" }, */
+    /*    { name: "Om oss", href: "/om-oss" }, */
     { name: "Alla fordon", href: "/fordon" },
     { name: "Verkstad", href: "/verkstad" },
     { name: "Kontakta oss", href: "/kontakt" },
@@ -37,7 +37,17 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center md:pl-10">
+        <Link
+          href="/"
+          className="flex items-center md:pl-10"
+          onClick={(e) => {
+            // If already on home page, just scroll to top
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
           <Image
             src="/logo.png"
             alt="Logo"
@@ -51,7 +61,11 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-semibold text-sm uppercase">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className={linkClasses(link.href)}>
+            <Link
+              key={link.name}
+              href={link.href}
+              className={linkClasses(link.href)}
+            >
               {link.name}
             </Link>
           ))}
