@@ -84,6 +84,6 @@ export const vehicles: VehicleCardProps[] = [
     details: "4 bäddar",
     category: "Husbilar",
     image: "/car/sun.jpg",
-    link: "/fordon/8",
+    link: "/fordon/9",
   },
 ];
