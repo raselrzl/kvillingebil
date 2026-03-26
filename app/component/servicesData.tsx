@@ -145,7 +145,7 @@ export default function ServicesSlider() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl">Vi erbjuder</h2>
+          <h2 className="text-3xl md:text-4xl uppercase text-[#2db1cc]">Vi erbjuder</h2>
           <p className="text-gray-500 mt-2 text-sm">
             Allt inom husbilar, husvagnar och fordonstjänster
           </p>
