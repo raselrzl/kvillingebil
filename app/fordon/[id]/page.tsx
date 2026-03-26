@@ -3,6 +3,8 @@
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import HusvagnarSlider from "../HusvagnarSlider";
 import HusbilarSlider from "../HusbilarSlider";
 import { getByCategory } from "@/app/data/vehicleUtils";
@@ -18,38 +20,29 @@ type VehicleCardProps = {
   isNew?: boolean;
   link: string;
 };
+
 export default function VehicleDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
 
-  // Type guard: if id is undefined, show not found
   if (!id) {
     return (
-      <p className="text-center py-12 text-gray-500 text-lg">
-        Vehicle not found
-      </p>
+      <p className="text-center py-12 text-gray-500 text-lg">Vehicle not found</p>
     );
   }
 
-  // ✅ Tell TypeScript id is definitely a string
-  const vehicle: VehicleCardProps | undefined = vehicles.find(
-    (v) => v.id === id
-  );
+  const vehicle: VehicleCardProps | undefined = vehicles.find((v) => v.id === id);
 
   if (!vehicle) {
     return (
-      <p className="text-center py-12 text-gray-500 text-lg">
-        Vehicle not found
-      </p>
+      <p className="text-center py-12 text-gray-500 text-lg">Vehicle not found</p>
     );
   }
 
-  // Related vehicles in the same category
   const relatedVehicles = getByCategory(vehicles, vehicle.category).filter(
     (v) => v.id !== vehicle.id
   );
 
-  // Dynamic slider based on category
   const renderSlider = () => {
     switch (vehicle.category) {
       case "Husbilar":
@@ -59,6 +52,16 @@ export default function VehicleDetailPage() {
       default:
         return null;
     }
+  };
+
+  // ✅ Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [zoom, setZoom] = useState(1);
+
+  const handleWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    setZoom((prev) => Math.min(Math.max(prev + delta, 1), 3)); // zoom 1x to 3x
   };
 
   return (
@@ -73,7 +76,11 @@ export default function VehicleDetailPage() {
           ← Tillbaka till fordon
         </Link>
 
-        <div className="relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl">
+        {/* Vehicle image with click-to-open modal */}
+        <div
+          className="relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl cursor-zoom-in"
+          onClick={() => setIsModalOpen(true)}
+        >
           <Image
             src={vehicle.image}
             alt={vehicle.title}
@@ -88,6 +95,7 @@ export default function VehicleDetailPage() {
           )}
         </div>
 
+        {/* Vehicle info */}
         <div className="mt-10 md:flex md:justify-between md:items-start md:space-x-16">
           <div className="space-y-5 md:flex-1">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
@@ -118,6 +126,41 @@ export default function VehicleDetailPage() {
           </div>
         )}
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button
+              className="absolute top-6 right-6 text-white text-3xl font-bold z-50"
+              onClick={() => {
+                setIsModalOpen(false);
+                setZoom(1);
+              }}
+            >
+              ×
+            </button>
+            <motion.div
+              className="relative"
+              style={{ scale: zoom }}
+              onWheel={handleWheel}
+            >
+              <Image
+                src={vehicle.image}
+                alt={vehicle.title}
+                width={1200}
+                height={800}
+                className="object-contain max-h-[80vh] rounded-lg shadow-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
