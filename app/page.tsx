@@ -45,23 +45,35 @@ const HomePage: React.FC = () => {
       </section>
       <CategoryLink />
       {/* STATS / TRUST SECTION */}
-      <section className="py-20 bg-white font-inter">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-          {[
-            { number: "10+", label: "År erfarenhet" },
-            { number: "100+", label: "Sålda fordon" },
-            { number: "100%", label: "Personlig service" },
-            { number: "∞", label: "Resmöjligheter" },
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#2db1cc]">
-                {item.number}
-              </h3>
-              <p className="text-gray-600 mt-2 text-sm md:text-base">
-                {item.label}
-              </p>
-            </div>
-          ))}
+      <section className="py-24 bg-linear-to-b from-white to-gray-50 font-inter">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { number: "10+", label: "År erfarenhet" },
+              { number: "100+", label: "Sålda fordon" },
+              { number: "100%", label: "Personlig service" },
+              { number: "∞", label: "Resmöjligheter" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center border border-gray-100 hover:-translate-y-2"
+              >
+                {/* Number */}
+                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-[#2db1cc] to-[#1e90ff] text-transparent bg-clip-text">
+                  {item.number}
+                </h3>
+
+                {/* Divider */}
+                <div className="w-10 h-0.5 bg-[#2db1cc] my-4 group-hover:w-16 transition-all duration-300"></div>
+
+                {/* Label */}
+                <p className="text-gray-600 text-sm md:text-base text-center">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <ServicesSlider />
