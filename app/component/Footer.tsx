@@ -81,15 +81,7 @@ const Footer: React.FC = () => {
               Boka tid
             </Link>
 
-            <Link
-              href="/paymentoptions"
-              onClick={handleScrollTop}
-              className="block text-xs font-bold text-gray-300 underline hover:text-white transition"
-            >
-              Betalningsalternativ
-            </Link>
-
-            <Link
+           <Link
               href="/om-oss"
               onClick={handleScrollTop}
               className="block text-xs font-bold text-gray-300 underline hover:text-white transition"
