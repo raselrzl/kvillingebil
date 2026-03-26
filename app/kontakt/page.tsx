@@ -3,13 +3,12 @@
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 import ContactInfoCard from "../component/ContactInfoCard";
-import MapCom from "../component/MapCom";
 
 export default function ContactOssPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative font-inter w-full h-120 sm:h-130 2xl:h-150 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative font-inter w-full h-130 sm:h-140 lg:h-150 flex items-center justify-center overflow-hidden bg-black">
         <video
           src="/kvpromo.mp4"
           autoPlay

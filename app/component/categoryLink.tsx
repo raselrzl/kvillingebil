@@ -35,7 +35,7 @@ const CategoryLink: React.FC = () => {
             >
               <Link
                 href={item.href}
-                className="relative block h-70 rounded-xl overflow-hidden shadow-xl cursor-pointer group"
+                className="relative block h-70 rounded-sm overflow-hidden shadow-xl cursor-pointer group"
               >
                 {/* Background Image */}
                 <div
