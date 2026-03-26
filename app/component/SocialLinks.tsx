@@ -5,13 +5,13 @@ import Image from "next/image";
 export default function SocialLinks() {
   const socialLinks = [
     {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/", // ändra till din länk
+      name: "FB",
+      href: "https://www.facebook.com/profile.php?id=61557864878746", // ändra till din länk
       icon: "/facebook.png",
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com", // ändra till din länk
+      href: "https://www.instagram.com/kvillingebil/", // ändra till din länk
       icon: "/instagram.webp",
     },
   ];
