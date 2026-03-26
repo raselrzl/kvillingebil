@@ -54,7 +54,7 @@ export const vehicles: VehicleCardProps[] = [
     price: "589. 000 kr",
     details: "3 bäddar",
     category: "Husbilar",
-    image: "/car/v6.jpg",
+    image: "/car/v8.jpg",
     isNew: true,
     link: "/fordon/6",
   },

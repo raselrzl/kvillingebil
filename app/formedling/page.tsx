@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FormedlingPage() {
   const offers = [
@@ -198,9 +199,9 @@ export default function FormedlingPage() {
               Vi tar hand om hela processen – från värdering till försäljning.
             </p>
 
-            <button className="bg-[#2db1cc] hover:bg-[#249bb3] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-base transition">
+            <Link href="/kontakt" className="bg-[#2db1cc] hover:bg-[#249bb3] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-base transition">
               Kontakta oss
-            </button>
+            </Link>
           </div>
         </div>
       </section>
