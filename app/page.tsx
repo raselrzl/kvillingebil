@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
         {/* Background Video */}
         <video
           ref={videoRef}
-          src="/kiv.mp4"
+          src="/car1.mp4"
           autoPlay
           loop
           muted
