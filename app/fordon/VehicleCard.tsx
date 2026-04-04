@@ -41,7 +41,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
       </div>
 
       {isNew && (
-        <span className="absolute top-4 right-4 bg-gradient-to-r from-[#2db1cc] to-[#36b795] text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+        <span className="absolute top-4 right-4 bg-linear-to-r from-[#2db1cc] to-[#36b795] text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
           NY
         </span>
       )}
