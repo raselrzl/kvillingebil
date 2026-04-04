@@ -18,9 +18,9 @@ export default function WorkshopPagePremium() {
   ];
 
   return (
-    <>
+    <div className="bg-gray-50">
       {/* HERO */}
-      <section className="relative w-full h-140 md:h-160 flex items-center justify-center bg-linear-to-r from-gray-900 via-black to-gray-900">
+      <section className="relative w-full  h-140 md:h-160 flex items-center justify-center bg-linear-to-r from-gray-900 via-black to-gray-900">
         <video
           src="/w.mp4"
           autoPlay
@@ -49,7 +49,7 @@ export default function WorkshopPagePremium() {
       </section>
 
       {/* PREMIUM IMAGE + TEXT CARD */}
-      <section className="max-w-7xl mx-auto px-4 py-20 relative">
+      <section className="max-w-7xl mx-auto px-4 py-20 relative ">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Layered Images */}
           <div className="relative w-full h-96 sm:h-120 lg:h-130">
@@ -125,15 +125,30 @@ export default function WorkshopPagePremium() {
       </section>
 
       {/* CTA */}
-      <section className="relative w-full py-24 bg-linear-to-r from-gray-900 via-black to-gray-900">
+      <section className="relative max-w-6xl sm:mx-auto mr-4 ml-4 mb-8 py-24 bg-linear-to-t from-black via-black to-white">
         <div className="absolute inset-0">
           <Image
-            src="/workshop1.png"
+            src="/2.png"
             alt="CTA Background"
             fill
             className="object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-black/70" />
+        </div>
+
+        {/* Connector Curve */}
+        <div className="absolute bottom-0 w-full overflow-hidden leading-[0] pointer-events-none">
+          <svg
+            className="relative block w-full h-16"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 120"
+          >
+            <path
+              d="M0,0 C600,120 600,0 1200,120 L1200,0 L0,0 Z"
+              className="fill-black"
+            ></path>
+          </svg>
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6">
@@ -145,12 +160,12 @@ export default function WorkshopPagePremium() {
           </p>
           <Link
             href="/kontakt#contact-booking"
-            className="bg-linear-to-r from-[#2db1cc] to-[#249bb3] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg"
+            className="bg-linear-to-r from-black to-[#2db1cc] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg"
           >
             Boka service
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

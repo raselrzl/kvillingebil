@@ -39,7 +39,7 @@ export default function AboutUsPage() {
           {/* IMAGE */}
           <div className="md:col-span-6 relative h-full min-h-75">
             <Image
-              src="/husvagnar.jpeg"
+              src="/2.jpg"
               alt="Kvillinge Bil gård"
               fill
               className="object-cover shadow-lg"
@@ -51,10 +51,10 @@ export default function AboutUsPage() {
             <div className="bg-white shadow-xl p-8 sm:p-10 space-y-6 border border-gray-200">
 
               {/* Accent */}
-              <div className="w-14 h-[2px] bg-gradient-to-r from-[#2db1cc] to-[#36b795]" />
+              <div className="w-14 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795]" />
 
               {/* Heading */}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 leading-snug">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 leading-snug uppercase">
                 Frihet på vägarna med{" "}
                 <span className="text-[#2db1cc]">Kvillinge Bil</span>
               </h2>
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
               <div className="pt-2">
                 <a
                   href="/kontakt"
-                  className="inline-block px-8 py-3 bg-[#2db1cc] text-white text-sm font-medium shadow-lg hover:bg-[#249bb3] transition"
+                  className="inline-block px-8 py-3 bg-linear-to-r from-black to-[#2db1cc] text-white text-sm font-medium shadow-lg hover:bg-[#249bb3] transition"
                 >
                   Kontakta oss
                 </a>
@@ -117,10 +117,10 @@ export default function AboutUsPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center border border-gray-100 hover:-translate-y-2"
+                className="group bg-white shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center shadow-[#2db1cc] hover:-translate-y-2"
               >
                 {/* Number */}
-                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-[#2db1cc] to-[#1e90ff] text-transparent bg-clip-text">
+                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-black to-[#2db1cc] text-transparent bg-clip-text">
                   {item.number}
                 </h3>
 

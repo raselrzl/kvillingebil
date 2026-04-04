@@ -36,7 +36,7 @@ export default function CareerPage() {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-20 bg-gray-50">
+      <section className="max-w-5xl mx-auto px-4 sm:px-0 py-10 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,8 +67,8 @@ export default function CareerPage() {
       </section>
 
       {/* POSITION */}
-      <section className="bg-gray-50 py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="bg-gray-50 py-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ export default function CareerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative w-full py-24 bg-linear-to-t from-gray-900 to-gray-100">
+       <section className="relative max-w-5xl sm:mx-auto mr-4 ml-4 mb-8 py-10 bg-linear-to-t from-black via-black to-white">
         <div className="absolute inset-0">
           <Image
             src="/22.jpg"
