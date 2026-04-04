@@ -29,8 +29,8 @@ const HomePage: React.FC = () => {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80"></div>
-
+        {/* <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80"></div>
+ */}
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
