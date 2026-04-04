@@ -1,5 +1,14 @@
-import { CarouselVehicle, VehicleCardProps } from "../fordon/VehicleCard";
+import { VehicleCardProps } from "../fordon/VehicleCard";
 
+
+// VehicleCard.tsx
+export interface CarouselVehicle {
+  id: string;
+  title: string;
+  price: string;
+  image: string;
+  isNew?: boolean;
+}
 
 export const getNewVehicles = (vehicles: VehicleCardProps[]): CarouselVehicle[] => {
   return vehicles

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { CarouselVehicle } from "./VehicleCard";
 import React from "react";
+import { CarouselVehicle } from "../data/vehicleUtils";
 
 interface HeroCarouselProps {
   vehicles: CarouselVehicle[];
