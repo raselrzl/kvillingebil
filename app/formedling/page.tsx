@@ -50,7 +50,6 @@ export default function FormedlingPage() {
           className="absolute bottom-10 z-20 text-center text-white px-4 w-full"
         >
           <h1 className="text-2xl sm:text-4xl font-extrabold font-inter tracking-wide uppercase">
-         
             Smidig försäljning av din husbil eller husvagn
           </h1>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
@@ -84,18 +83,21 @@ export default function FormedlingPage() {
           </div>
 
           {/* TEXT CARD */}
-          <div className="bg-white p-6 sm:p-8 shadow-md space-y-5">
-            <div className="w-12 h-1 bg-[#2db1cc]" />
+          <div className="relative p-px bg-linear-to-br from-[#2db1cc]/40 via-transparent to-[#36b795]/40 shadow-xl">
+            <div className="bg-white/80 backdrop-blur-xl border border-white/40 p-6 sm:p-8 space-y-5">
+              {/* Accent line */}
+              <div className="w-12 h-1 bg-linear-to-r from-black to-[#36b795]" />
 
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              På Kvillinge Bil i Norrköping har vi god erfarenhet av försäljning
-              av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
-            </p>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                På Kvillinge Bil i Norrköping har vi god erfarenhet av
+                försäljning av kvalitetsmärken som Kabe, Adria, Swift och Hobby.
+              </p>
 
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              Låt oss ta hand om marknadsföringen, förhandlingarna och allt det
-              administrativa arbetet – tryggt, enkelt och effektivt.
-            </p>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                Låt oss ta hand om marknadsföringen, förhandlingarna och allt
+                det administrativa arbetet – tryggt, enkelt och effektivt.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -213,7 +215,8 @@ export default function FormedlingPage() {
             <Link
               href="/kontakt"
               className="px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
-  hover:from-[#1c86ee] hover:to-black transition duration-300" >
+  hover:from-[#1c86ee] hover:to-black transition duration-300"
+            >
               Kontakta oss
             </Link>
           </div>

@@ -39,7 +39,7 @@ export default function WorkshopPagePremium() {
           <h1 className="text-2xl sm:text-4xl font-extrabold font-inter tracking-wide uppercase">
             Verkstad and Service
           </h1>
-           <p className="text-gray-300 text-sm md:text-base">
+          <p className="text-gray-300 text-sm md:text-base">
             {" "}
             Boka din husbil eller husvagn för professionell service och
             reparation. Vi tar hand om allt!
@@ -75,19 +75,26 @@ export default function WorkshopPagePremium() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="bg-linear-to-br from-gray-50 via-gray-100 to-gray-50 p-8 sm:p-12 shadow-2xl space-y-6"
+            className="relative p-px bg-linear-to-br from-[#2db1cc]/40 via-transparent to-[#36b795]/40 shadow-2xl"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold font-inter text-gray-800 uppercase">
-              Professionell service & expertvård
-            </h2>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Som återförsäljare av KAMA fritid hjälper vi dig med beställning
-              av reservdelar och tillbehör.
-            </p>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Vår verkstad erbjuder fullservice för att hålla ditt fordon i
-              toppskick tryggt, enkelt och effektivt.
-            </p>
+            <div className="bg-white/80 backdrop-blur-xl border border-white/40 p-8 sm:p-12 space-y-6">
+              {/* Accent line */}
+              <div className="w-12 h-1 bg-linear-to-r from-black to-[#36b795]" />
+
+              <h2 className="text-2xl sm:text-3xl font-bold font-inter text-gray-800 uppercase">
+                Professionell service & expertvård
+              </h2>
+
+              <p className="text-gray-700 text-base leading-relaxed">
+                Som återförsäljare av KAMA fritid hjälper vi dig med beställning
+                av reservdelar och tillbehör.
+              </p>
+
+              <p className="text-gray-700 text-base leading-relaxed">
+                Vår verkstad erbjuder fullservice för att hålla ditt fordon i
+                toppskick tryggt, enkelt och effektivt.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>

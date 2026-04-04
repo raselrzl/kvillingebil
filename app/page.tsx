@@ -25,17 +25,21 @@ const HomePage: React.FC = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover brightness-75"
         />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80"></div>
+
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
+          animate={{ opacity: 1, y: [0, 12, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="absolute bottom-8 z-10"
+          className="absolute bottom-8 z-10 flex justify-center w-full"
         >
-          <div className="w-6 h-10 border-2 border-white flex justify-center">
-            <div className="w-1 h-2 bg-white mt-2 rounded" />
+          <div className="w-6 h-10 border-2 border-white flex justify-center items-start">
+            <div className="w-1 h-2 bg-white mt-2 animate-bounce"></div>
           </div>
         </motion.div>
       </section>
