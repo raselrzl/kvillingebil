@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
       <CategoryLink />
       {/* STATS / TRUST SECTION */}
       <section className="pb-20 bg-linear-to-b from-white to-gray-50 font-inter">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
