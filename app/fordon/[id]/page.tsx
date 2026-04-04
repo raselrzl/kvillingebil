@@ -72,14 +72,14 @@ export default function VehicleDetailPage() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link
           href="/fordon"
-          className="text-[#2db1cc] font-semibold hover:underline mb-6 inline-block"
+          className="text-gray-100 px-2 py-0.5 hover:underline mb-6 inline-block bg-[#2db1cc]"
         >
           ← Tillbaka till fordon
         </Link>
 
         {/* Main Image */}
         <div
-          className="relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl cursor-zoom-in"
+          className="relative w-full h-125 md:h-150 overflow-hidden shadow-2xl cursor-zoom-in"
           onClick={() => setIsModalOpen(true)}
         >
           <Image
@@ -91,7 +91,7 @@ export default function VehicleDetailPage() {
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
           {vehicle.isNew && (
-            <span className="absolute top-6 right-6 bg-linear-to-r from-[#2db1cc] to-[#36b795] text-white px-4 py-2 rounded-full text-sm font-bold">
+            <span className="absolute top-6 right-6 bg-linear-to-r from-black to-[#2db1cc] text-white px-6 py-1 rounded-full text-xl font-bold">
               NY
             </span>
           )}
@@ -103,7 +103,7 @@ export default function VehicleDetailPage() {
             <div
               key={i}
               onClick={() => setSelectedImage(img)}
-              className={`relative w-10 h-10 rounded-md overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#2db1cc]" : "border-transparent"}`}
+              className={`relative w-10 h-10 overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#2db1cc]" : "border-transparent"}`}
             >
               <Image
                 src={img}
@@ -134,8 +134,17 @@ export default function VehicleDetailPage() {
             {vehicle.specs && (
               <ul className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
                 {Object.entries(vehicle.specs).map(([key, value]) => (
-                  <li key={key} className="bg-gray-100 px-3 py-2 rounded-md">
-                    <strong className="capitalize">{key}:</strong> {value}
+                  <li
+                    key={key}
+                    className="flex justify-between items-center bg-white/80 backdrop-blur-md px-4 py-3 shadow-sm shadow-[#2db1cc] hover:shadow-md transition"
+                  >
+                    <span className="text-gray-500 text-xs md:text-sm capitalize">
+                      {key}
+                    </span>
+
+                    <span className="text-gray-900 font-semibold text-xs md:text-sm text-right">
+                      {value}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -145,7 +154,7 @@ export default function VehicleDetailPage() {
           <div className="mt-6 md:mt-0">
             <Link
               href="/kontakt"
-              className="bg-linear-to-r from-[#2db1cc] to-[#36b795] text-white px-8 py-4 rounded-xl shadow-xl font-semibold hover:shadow-2xl"
+              className="bg-linear-to-r from-black to-[#2db1cc] text-white px-8 py-4 rounded-full shadow-xl font-semibold hover:shadow-2xl"
             >
               Kontakta oss
             </Link>

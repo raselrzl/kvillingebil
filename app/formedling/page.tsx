@@ -47,9 +47,10 @@ export default function FormedlingPage() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-center text-white px-4 w-full"
+          className="absolute bottom-10 z-20 text-center text-white px-4 w-full"
         >
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-inter">
+          <h1 className="text-2xl sm:text-4xl font-extrabold font-inter tracking-wide uppercase">
+         
             Smidig försäljning av din husbil eller husvagn
           </h1>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
@@ -57,12 +58,12 @@ export default function FormedlingPage() {
       </section>
 
       {/* INTRO + PREMIUM IMAGE STYLE */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-4 md:px-0 py-16 sm:py-20">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* IMAGES (Layered Style) */}
           <div className="relative w-full h-75 sm:h-100">
             {/* Back Image */}
-            <div className="absolute top-0 left-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-lg">
+            <div className="absolute top-0 left-0 w-[75%] h-[75%] overflow-hidden shadow-lg">
               <Image
                 src="/v1.png"
                 alt="Vehicle 1"
@@ -72,7 +73,7 @@ export default function FormedlingPage() {
             </div>
 
             {/* Front Image */}
-            <div className="absolute bottom-0 right-0 w-[75%] h-[75%] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+            <div className="absolute bottom-0 right-0 w-[75%] h-[75%] overflow-hidden shadow-lg rotate-3">
               <Image
                 src="/v2.png"
                 alt="Vehicle 2"
@@ -83,7 +84,7 @@ export default function FormedlingPage() {
           </div>
 
           {/* TEXT CARD */}
-          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-md space-y-5">
+          <div className="bg-white p-6 sm:p-8 shadow-md space-y-5">
             <div className="w-12 h-1 bg-[#2db1cc]" />
 
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
@@ -101,10 +102,10 @@ export default function FormedlingPage() {
 
       {/* LISTS */}
       <section className="max-w-6xl mx-auto py-12 sm:py-16 space-y-10 text-gray-700">
-        <section className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
+        <section className="max-w-6xl mx-auto py-12 sm:py-16">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* IMAGE WITH TITLE OVERLAY */}
-            <div className="relative w-full h-64 sm:h-80 md:h-full rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative h-64 sm:h-80 md:h-full overflow-hidden shadow-lg mx-4 md:mx-0">
               <Image
                 src="/3.png"
                 alt="Vi erbjuder"
@@ -114,18 +115,18 @@ export default function FormedlingPage() {
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-inter text-center px-4">
+                <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-inter text-center px-4 uppercase">
                   Vi erbjuder
                 </h2>
               </div>
             </div>
 
             {/* LIST WITH CHECKMARK SVG */}
-            <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-3 sm:space-y-4 mx-4 md:mx-0">
               {offers.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center bg-[#2db1cc]/20 rounded-full px-4 py-2 text-sm sm:text-base"
+                  className="flex items-center bg-[#2db1cc]/20 px-4 py-2 text-sm sm:text-base"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -152,20 +153,30 @@ export default function FormedlingPage() {
         </section>
 
         {/* IMAGE BANNER */}
-        <div className="relative mx-6 h-48 sm:h-64 md:h-72 w-full rounded-2xl overflow-hidden shadow-lg">
-          <Image src="/v1.png" alt="Showcase" fill className="object-cover" />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-lg sm:text-2xl md:text-3xl font-semibold font-inter text-center px-4">
-            Fördelar för köparen
+
+        <div className="relative max-w-6xl h-48 sm:h-64 md:h-72 overflow-hidden shadow-lg mx-4 sm:mx-auto flex items-center justify-center">
+          <Image
+            src="/v1.png"
+            alt="Vi erbjuder"
+            fill
+            className="object-cover object-center"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-center px-6">
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold font-inter uppercase leading-tight">
+              Fördelar för köparen
+            </h2>
           </div>
         </div>
 
         {/* BENEFITS */}
-        <div>
-          <div className="space-y-3 sm:space-y-4 mt-6 px-6 max-w-4xl mx-auto">
+        <div className="">
+          <div className="space-y-3 sm:space-y-4 mt-6 px-4 md:px-0 max-w-6xl mx-auto">
             {buyerBenefits.map((item, index) => (
               <motion.div
                 key={index}
-                className=" rounded-full border-l-4 bg-[#2db1cc]/20  border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
+                className=" border-l-4 bg-[#2db1cc]/20  border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
@@ -178,8 +189,8 @@ export default function FormedlingPage() {
       </section>
 
       {/* CTA */}
-      <section className="w-full px-6 my-16">
-        <div className="max-w-6xl mx-auto relative overflow-hidden rounded-2xl px-6">
+      <section className="w-full px-4 my-16">
+        <div className="max-w-6xl mx-auto relative overflow-hidden px-6">
           <div className="absolute inset-0">
             <Image
               src="/v2.png"
@@ -191,7 +202,7 @@ export default function FormedlingPage() {
           </div>
 
           <div className="relative z-10 text-center text-white py-12 sm:py-16 px-4 sm:px-6">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-semibold mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-semibold mb-4 uppercase">
               Redo att sälja ditt fordon?
             </h3>
 
@@ -199,7 +210,10 @@ export default function FormedlingPage() {
               Vi tar hand om hela processen – från värdering till försäljning.
             </p>
 
-            <Link href="/kontakt" className="bg-[#2db1cc] hover:bg-[#249bb3] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-base transition">
+            <Link
+              href="/kontakt"
+              className="px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+  hover:from-[#1c86ee] hover:to-black transition duration-300" >
               Kontakta oss
             </Link>
           </div>

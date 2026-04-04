@@ -11,7 +11,7 @@ export default function HusvagnarSlider({
   if (!vehicles || vehicles.length === 0) {
     return (
       <div className="w-full flex justify-center items-center py-16">
-        <div className="max-w-xl w-full bg-linear-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-2xl shadow-xl p-8 text-center">
+        <div className="max-w-xl w-full bg-linear-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-800 mb-4">
             Inga husvagnar tillgängliga just nu
           </h3>

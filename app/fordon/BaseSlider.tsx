@@ -73,13 +73,13 @@ const BaseSlider: React.FC<BaseSliderProps> = ({
       {/* Arrows */}
       <button
         onClick={prev}
-        className="absolute top-1/2 -translate-y-1/2 left-2 bg-black/40 text-white px-2 py-1 rounded-full hover:bg-black/60 z-10"
+        className="absolute top-1/2 -translate-y-1/2 left-2 bg-black/50 text-white px-2 py-1 rounded-full hover:bg-black/60 z-10"
       >
         ‹
       </button>
       <button
         onClick={next}
-        className="absolute top-1/2 -translate-y-1/2 right-2 bg-black/40 text-white px-2 py-1 rounded-full hover:bg-black/60 z-10"
+        className="absolute top-1/2 -translate-y-1/2 right-2 bg-black/50 md:bg-black text-white px-2 py-1 rounded-full hover:bg-black/60 z-10"
       >
         ›
       </button>

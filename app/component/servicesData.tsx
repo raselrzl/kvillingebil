@@ -184,7 +184,7 @@ export default function ServicesSlider() {
               {extendedData.map((item, index) => (
                 <div
                   key={index}
-                  className="w-70 h-80 bg-white rounded-xl border border-gray-200 shadow-md snap-start shrink-0 flex flex-col items-start p-6 transition hover:shadow-xl hover:-translate-y-1"
+                  className="w-70 h-80 bg-white border border-[#2db1cc]/70 shadow-md snap-start shrink-0 flex flex-col items-start p-6 transition hover:shadow-xl hover:-translate-y-1"
                 >
                   <div className="mb-6">{item.icon}</div>
 

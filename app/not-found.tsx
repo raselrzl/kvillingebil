@@ -26,7 +26,7 @@ export default function NotFound() {
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-widest font-inter">
             404
           </h1>
-          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
           <h2 className="mt-6 text-xl md:text-2xl font-semibold">
             Sidan kunde inte hittas
           </h2>
@@ -50,14 +50,14 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleRedirect}
-              className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition shadow-md"
+              className="px-8 py-3 bg-black text-white hover:bg-gray-800 transition shadow-md"
             >
               Till startsidan
             </button>
 
             <button
               onClick={() => router.back()}
-              className="px-8 py-3 border border-[#2db1cc] rounded-full hover:border-[#2db1cc] hover:text-[#2db1cc] transition"
+              className="px-8 py-3 border border-[#2db1cc] hover:border-[#2db1cc] hover:text-[#2db1cc] transition"
             >
               Gå tillbaka
             </button>

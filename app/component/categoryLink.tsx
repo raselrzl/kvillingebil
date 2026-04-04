@@ -22,7 +22,7 @@ const links = [
 ];
 const CategoryLink: React.FC = () => {
   return (
-    <section className="w-full py-20 sm:py-30 bg-white font-inter">
+    <section className="w-full py-20 bg-white font-inter">
       <div className="max-w-7xl mx-auto px-8 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {links.map((item, index) => (
@@ -35,7 +35,7 @@ const CategoryLink: React.FC = () => {
             >
               <Link
                 href={item.href}
-                className="relative block h-70 rounded-sm overflow-hidden shadow-xl cursor-pointer group"
+                className="relative block h-70 overflow-hidden shadow-xl cursor-pointer group"
               >
                 {/* Background Image */}
                 <div
@@ -56,11 +56,11 @@ const CategoryLink: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        <div className="mt-12 flex justify-center">
+        <div className="mt-20 flex justify-center">
           <Link
             href="/fordon"
-            className="px-8 py-3 bg-black text-white border border-black text-sm uppercase tracking-wide rounded-full 
-    hover:bg-black/70 hover:text-white transition duration-300"
+            className="px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+  hover:from-[#1c86ee] hover:to-black transition duration-300"
           >
             Visa alla fordon
           </Link>

@@ -34,26 +34,26 @@ export default function WorkshopPagePremium() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center"
+          className="absolute bottom-8 transform px-10 text-white text-center"
         >
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-inter tracking-wide">
-            Verkstad & Service
+          <h1 className="text-2xl sm:text-4xl font-extrabold font-inter tracking-wide uppercase">
+            Verkstad and Service
           </h1>
-          <div className="w-24 h-1 bg-linear-to-r from-[#2db1cc] to-[#249bb3] mx-auto mt-6 rounded-full" />
-          <p className="text-gray-600 text-sm md:text-base">
+           <p className="text-gray-300 text-sm md:text-base">
             {" "}
             Boka din husbil eller husvagn för professionell service och
             reparation. Vi tar hand om allt!
           </p>
+          <div className="w-24 h-1 bg-linear-to-r from-[#2db1cc] to-[#249bb3] mx-auto mt-6 rounded-full" />
         </motion.div>
       </section>
 
       {/* PREMIUM IMAGE + TEXT CARD */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 relative">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-4 py-20 relative">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Layered Images */}
           <div className="relative w-full h-96 sm:h-120 lg:h-130">
-            <div className="absolute top-0 left-0 w-[80%] h-[80%] rounded-3xl overflow-hidden shadow-2xl transform -rotate-3">
+            <div className="absolute top-0 left-0 w-[80%] h-[80%] overflow-hidden shadow-2xl transform -rotate-3">
               <Image
                 src="/workshop.jpeg"
                 alt="Workshop 1"
@@ -61,7 +61,7 @@ export default function WorkshopPagePremium() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute bottom-0 right-0 w-[80%] h-[80%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-3">
+            <div className="absolute bottom-0 right-0 w-[80%] h-[80%] overflow-hidden shadow-2xl transform rotate-3">
               <Image
                 src="/22.jpg"
                 alt="Workshop 2"
@@ -75,9 +75,9 @@ export default function WorkshopPagePremium() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="bg-linear-to-br from-gray-50 via-gray-100 to-gray-50 rounded-3xl p-8 sm:p-12 shadow-2xl space-y-6"
+            className="bg-linear-to-br from-gray-50 via-gray-100 to-gray-50 p-8 sm:p-12 shadow-2xl space-y-6"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold font-inter text-gray-800">
+            <h2 className="text-2xl sm:text-3xl font-bold font-inter text-gray-800 uppercase">
               Professionell service & expertvård
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
@@ -92,10 +92,10 @@ export default function WorkshopPagePremium() {
         </div>
       </section>
 
-      {/* SERVICES IN PREMIUM BUBBLES */}
+      {/* SERVICES  */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-inter text-gray-800">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-inter text-[#2db1cc] uppercase">
             Våra tjänster
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,7 +105,7 @@ export default function WorkshopPagePremium() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform cursor-default"
+                className="bg-white shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform cursor-default"
               >
                 <div className="shrink-0 w-10 h-10 rounded-full bg-linear-to-br from-[#2db1cc] to-[#249bb3] flex items-center justify-center text-white font-bold">
                   ✓
@@ -130,7 +130,7 @@ export default function WorkshopPagePremium() {
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 font-inter">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 font-inter uppercase">
             Redo att boka service?
           </h3>
           <p className="text-white opacity-90 mb-8 text-base sm:text-lg">

@@ -71,9 +71,9 @@ export default function ContactForm() {
 
   return (
     <section className="font-inter w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-2xl mx-auto bg-gray-50 pb-8 px-4 shadow p-4 py-10 rounded-2xl">
+      <div className="max-w-2xl mx-auto bg-gray-50 pb-8 px-4 shadow p-4 py-10 ">
         <form className="space-y-2 md:space-y-6" onSubmit={handleSubmit} id="contact-booking">
-          <div className="flex items-center gap-3 bg-gray-100 rounded-xl p-3">
+          <div className="flex items-center gap-3 bg-gray-100 p-3">
             <User className="w-5 h-5 text-gray-500" />
             <input
               type="text"
@@ -86,7 +86,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
+          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 p-3">
             <Mail className="w-5 h-5 text-gray-500 dark:text-gray-300" />
             <input
               type="email"
@@ -99,7 +99,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
+          <div className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 p-3">
             <Edit3 className="w-5 h-5 text-gray-500 dark:text-gray-300" />
             <input
               type="text"
@@ -112,7 +112,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
+          <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 p-3">
             <MessageCircle className="w-5 h-5 text-gray-500 dark:text-gray-300 mt-1" />
             <textarea
               name="message"
@@ -145,15 +145,15 @@ export default function ContactForm() {
               name="captcha"
               value={formData.captcha}
               onChange={handleChange}
-              className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-xl p-3 outline-none text-gray-900 dark:text-white text-xs"
+              className="flex-1 bg-gray-100 dark:bg-gray-800 p-3 outline-none text-gray-900 dark:text-white text-xs"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#2db1cc] hover:bg-[#36b795] text-white font-inter font-semibold text-xs rounded-full py-2 sm:py-3 transition"
-          >
+           className="w-full px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+  hover:from-[#1c86ee] hover:to-black transition duration-300" >
             Skicka
           </button>
         </form>

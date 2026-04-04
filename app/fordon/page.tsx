@@ -18,7 +18,7 @@ export default function VehiclesPage() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
       </section> */}
-      <div className="font-inter bg-gray-50 min-h-screen space-y-16">
+      <div className="font-inter bg-gray-50 min-h-screen">
         {/* ✅ NEW VEHICLES CAROUSEL */}
         <NewVehiclesCarousel vehicles={vehicles} />
 

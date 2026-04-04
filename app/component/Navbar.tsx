@@ -77,11 +77,11 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <motion.span
-            className="h-0.5 w-7.5 bg-white rounded"
+            className="h-0.5 w-7.5 bg-white"
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
           />
           <motion.span
-            className="h-0.5 w-5 rounded bg-gray-100"
+            className="h-0.5 w-5 bg-gray-100"
             animate={
               menuOpen
                 ? { rotate: 45, y: 8, backgroundColor: "#2db1cc" }
@@ -90,7 +90,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="h-0.5 w-6 bg-white rounded"
+            className="h-0.5 w-6 bg-white"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
           />
         </div>

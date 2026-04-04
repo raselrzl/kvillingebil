@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
       </section>
       <CategoryLink />
       {/* STATS / TRUST SECTION */}
-      <section className="py-24 bg-linear-to-b from-white to-gray-50 font-inter">
+      <section className="pb-20 bg-linear-to-b from-white to-gray-50 font-inter">
         <div className="max-w-7xl mx-auto px-6">
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -53,10 +53,10 @@ const HomePage: React.FC = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center border border-gray-100 hover:-translate-y-2"
+                className="group bg-white shadow-md hover:shadow-xl shadow-[#1e90ff] transition-all duration-300 p-8 flex flex-col items-center border border-[#1e90ff]/20 hover:-translate-y-2"
               >
                 {/* Number */}
-                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-[#2db1cc] to-[#1e90ff] text-transparent bg-clip-text">
+                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-black to-[#1e90ff] text-transparent bg-clip-text">
                   {item.number}
                 </h3>
 
