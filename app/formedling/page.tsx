@@ -29,7 +29,7 @@ export default function FormedlingPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-130 sm:h-140 lg:h-150 flex items-center justify-center bg-black">
+      <section className="relative w-full h-140 md:h-160 flex items-center justify-center bg-black">
         {/* VIDEO */}
         <video
           src="/kv2.mp4"

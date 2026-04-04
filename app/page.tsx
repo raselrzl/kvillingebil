@@ -16,21 +16,17 @@ const HomePage: React.FC = () => {
   return (
     <>
       {" "}
-      <section className="relative w-full h-130 sm:h-140 2xl:h-150 flex items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative w-full h-140 md:h-160 flex items-center justify-center overflow-hidden bg-black text-white">
         {/* Background Video */}
         <video
           ref={videoRef}
-          src="/karavan.mp4"
+          src="/kiv.mp4"
           autoPlay
           loop
           muted
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/20" />
-
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -38,7 +34,7 @@ const HomePage: React.FC = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="absolute bottom-8 z-10"
         >
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-white flex justify-center">
             <div className="w-1 h-2 bg-white mt-2 rounded" />
           </div>
         </motion.div>

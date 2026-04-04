@@ -20,7 +20,7 @@ export default function WorkshopPagePremium() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-130 sm:h-140 lg:h-150 flex items-center justify-center bg-linear-to-r from-gray-900 via-black to-gray-900">
+      <section className="relative w-full h-140 md:h-160 flex items-center justify-center bg-linear-to-r from-gray-900 via-black to-gray-900">
         <video
           src="/w.mp4"
           autoPlay

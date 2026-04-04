@@ -8,18 +8,17 @@ export default function ContactOssPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative font-inter w-full h-130 sm:h-140 lg:h-150 flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative font-inter w-full h-140 md:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
-          src="/kvpromo.mp4"
+          src="/kiv3.mp4"
           autoPlay
           loop
           muted
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70" />
 
-        <motion.div
+        {/*    <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -35,7 +34,7 @@ export default function ContactOssPage() {
           </p>
         </div>
           <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
-        </motion.div>
+        </motion.div> */}
       </section>
       <section className="py-10 bg-gray-50">
         {" "}
