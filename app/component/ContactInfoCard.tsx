@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function ContactInfoCard() {
   return (
-    <section className="w-full dark:bg-gray-900 py-16 font-inter">
+    <section className="w-full py-16 font-inter">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="bg-white dark:bg-gray-800 shadow-lg border border-gray-200 overflow-hidden grid md:grid-cols-2">
+        <div className="bg-white shadow-lg border border-gray-200 overflow-hidden grid md:grid-cols-2">
           {/* LEFT SIDE – Image */}
           <div className="flex flex-col items-center justify-center p-10 bg-black text-white">
             <Image

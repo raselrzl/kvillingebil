@@ -6,7 +6,7 @@ import ContactInfoCard from "../component/ContactInfoCard";
 
 export default function ContactOssPage() {
   return (
-    <>
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="relative font-inter w-full h-140 md:h-160 flex items-center justify-center overflow-hidden bg-black">
         <video
@@ -37,6 +37,6 @@ export default function ContactOssPage() {
       <section className="py-10 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </div>
   );
 }
