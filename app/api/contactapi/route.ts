@@ -74,48 +74,54 @@ export async function POST(req: Request) {
     };
 
     // User auto-reply email (white background, marketing-friendly)
+    // User auto-reply email (mobile-friendly)
     const userMail = {
       from: `"Kvillinge Bil" <${process.env.SMTP_USER}>`,
       to: data.email,
       subject: "Thank You for Contacting Kvillinge Bil",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width:600px; margin:auto; padding:25px; border-radius:10px; background:#ffffff; color:#333;">
-          <h2 style="color:#2db1cc; text-align:center; font-size:28px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</h2>
+    <div style="font-family: Arial, sans-serif; max-width:600px; margin:auto; padding:25px; border-radius:10px; background:#ffffff; color:#333;">
+  
+      <p style="font-size:16px; line-height:1.6;">
+        Hi ${data.name},<br/>
+       <span style="color:#2db1cc; text-align:center; font-size:16px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</span><br/><br/>
 
-          <p style="font-size:16px; line-height:1.6;">
-            Hi ${data.name},<br/><br/>
-            We have received your message. At <strong>Kvillinge Bil AB</strong>, your inquiry is important to us. 
-            Our team responds based on priority to ensure you receive the attention you deserve.
-          </p>
+        We have received your message. At <strong>Kvillinge Bil AB</strong>, your inquiry is important to us.
+      </p>
 
-          <p style="font-size:16px; line-height:1.6; margin-top:10px;">
-            We will review your message carefully and respond as soon as possible. Meanwhile, you can explore our website for more information about our services.
-          </p>
+      <p style="font-size:16px; line-height:1.6; margin-top:10px;">
+        We will review your message carefully and respond as soon as possible. Meanwhile, you can explore our website for more information about our services.
+      </p>
 
-          <div style="text-align:center; margin:25px 0;">
-            <a href="https://www.kvillingebil.se" target="_blank" style="background: linear-gradient(90deg, #2db1cc, #249bb3); color:#fff; text-decoration:none; padding:12px 25px; border-radius:6px; font-weight:bold; display:inline-block;">
-              Visit Our Website
-            </a>
-          </div>
+      <p style="font-size:10px; line-height:1.6; margin-top:20px; padding:10px; background:#f9f9f9; border:1px solid #ddd; border-radius:4px; white-space: pre-wrap; word-wrap: break-word;">
+        <strong>Your message:</strong><br/>
+        ${data.message}
+      </p>
 
-          <p style="font-size:14px; color:#555; text-align:center; margin-top:15px;">
-            This is an automated response. Please do not reply directly to this email.
-          </p>
+      <div style="text-align:center; margin:25px 0;">
+        <a href="https://www.kvillingebil.se" target="_blank" style="background: linear-gradient(90deg, #2db1cc, #249bb3); color:#fff; text-decoration:none; padding:12px 25px; border-radius:6px; font-weight:bold; display:inline-block;">
+          Visit Our Website
+        </a>
+      </div>
 
-          <p style="font-size:14px; color:#888; text-align:center; margin-top:25px;">
-            Best regards,<br/>
-            Kvillinge Bil AB
-          </p>
+      <p style="font-size:14px; color:#555; text-align:center; margin-top:15px;">
+        This is an automated response. Please do not reply directly to this email.
+      </p>
 
-          <div style="text-align:center; margin-top:25px;background:#ffffff">
-            <img src="cid:logo" alt="Kvillinge Bil Logo" style="height:50px;" />
-          </div>
-        </div>
-      `,
+      <p style="font-size:14px; color:#888; text-align:center; margin-top:25px;">
+        Best regards,<br/>
+        Kvillinge Bil AB
+      </p>
+
+      <div style="text-align:center; margin-top:25px;">
+        <img src="cid:logo" alt="Kvillinge Bil Logo" style="height:50px;" />
+      </div>
+    </div>
+  `,
       attachments: [
         {
-          filename: "logo.png",
-          path: "./public/logo.png",
+          filename: "logoblack.jpeg",
+          path: "./public/logoblack.jpeg",
           cid: "logo",
         },
       ],
