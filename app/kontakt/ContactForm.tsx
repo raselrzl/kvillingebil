@@ -71,8 +71,24 @@ export default function ContactForm() {
 
   return (
     <section className="font-inter w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-2xl mx-auto bg-gray-50 pb-8 px-4 shadow p-4 py-10 ">
-        <form className="space-y-2 md:space-y-6" onSubmit={handleSubmit} id="contact-booking">
+      <div className="max-w-2xl mx-auto bg-white pb-8 px-4 shadow p-4 ">
+        <div className="text-center py-10">
+          <h1 className="text-xl sm:text-2xl font-extrabold uppercase tracking-wider text-black">
+            Contact Us
+          </h1>
+
+          <div className="w-24 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mt-6" />
+
+          <p className="mt-4 text-gray-600 max-w-xl mx-auto text-xs md:text-base leading-relaxed">
+            You are always welcome to contact us. Fill out the form below and we
+            will respond with priority and care.
+          </p>
+        </div>
+        <form
+          className="space-y-2 md:space-y-6"
+          onSubmit={handleSubmit}
+          id="contact-booking"
+        >
           <div className="flex items-center gap-3 bg-gray-100 p-3">
             <User className="w-5 h-5 text-gray-500" />
             <input
@@ -137,9 +153,7 @@ export default function ContactForm() {
           </label>
 
           <div className="flex items-center gap-3">
-            <span className="text-gray-700 text-xs">
-              4 + 1 =
-            </span>
+            <span className="text-gray-700 text-xs">4 + 1 =</span>
             <input
               type="text"
               name="captcha"
@@ -152,8 +166,9 @@ export default function ContactForm() {
 
           <button
             type="submit"
-           className="w-full px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
-  hover:from-[#1c86ee] hover:to-black transition duration-300" >
+            className="w-full px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+  hover:from-[#1c86ee] hover:to-black transition duration-300"
+          >
             Skicka
           </button>
         </form>
