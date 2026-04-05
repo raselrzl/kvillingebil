@@ -101,7 +101,7 @@ export async function POST(req: Request) {
       </p>
 
       <div style="text-align:center; margin-top:25px;">
-        <img src="./public/logoblack.jpeg" alt="Kvillinge Bil Logo" style="height:50px;" />
+        <img src="https://kvillingebil.vercel.app/logoblack.jpeg" alt="Kvillinge Bil Logo" style="height:50px;" />
       </div>
     </div>
   `,
