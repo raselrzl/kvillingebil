@@ -6,7 +6,7 @@ interface ContactFormData {
   subject: string;
   message: string;
   consent: boolean;
-  captcha: string; 
+  captcha: string;
 }
 
 export async function POST(req: Request) {
@@ -14,31 +14,24 @@ export async function POST(req: Request) {
     const data: ContactFormData = await req.json();
 
     // Validation
-    if (
-      !data.name ||
-      !data.email ||
-      !data.subject ||
-      !data.message
-    ) {
+    if (!data.name || !data.email || !data.subject || !data.message) {
       return new Response(
         JSON.stringify({ message: "Missing required fields" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Captcha check (server side)
     if (data.captcha !== "5") {
-      return new Response(
-        JSON.stringify({ message: "Invalid captcha" }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ message: "Invalid captcha" }), {
+        status: 400,
+      });
     }
 
     if (!data.consent) {
-      return new Response(
-        JSON.stringify({ message: "Consent required" }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ message: "Consent required" }), {
+        status: 400,
+      });
     }
 
     // Create transporter
@@ -69,11 +62,11 @@ export async function POST(req: Request) {
     };
 
     // Auto-reply email (user receives)
-   const userMail = {
-  from: `"Kvillinge Bil" <${process.env.SMTP_USER}>`,
-  to: data.email,
-  subject: "Thank You for Contacting Kvillinge Bil",
-  html: `
+    const userMail = {
+      from: `"Kvillinge Bil" <${process.env.SMTP_USER}>`,
+      to: data.email,
+      subject: "Thank You for Contacting Kvillinge Bil",
+      html: `
     <div style="font-family: Arial, sans-serif; max-width:600px; margin:auto; padding:25px; border-radius:10px; background:#ffffff; color:#333;">
       <h2 style="color:#2db1cc; text-align:center; font-size:28px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</h2>
 
@@ -108,19 +101,11 @@ export async function POST(req: Request) {
       </p>
 
       <div style="text-align:center; margin-top:25px;">
-        <img src="cid:logo" alt="Kvillinge Bil Logo" style="height:50px;" />
+        <img src="./public/logoblack.jpeg" alt="Kvillinge Bil Logo" style="height:50px;" />
       </div>
     </div>
   `,
-  attachments: [
-    {
-      filename: "logoblack.jpeg",
-      path: "./public/logoblack.jpeg",
-      cid: "logo",
-    },
-  ],
-  text: `Hi ${data.name},\nThank you for contacting Kvillinge Bil! Your inquiry is important to us, and we will respond as soon as possible.\n\nYour message: ${data.message}\n\nThis is an automated response. Please do not reply directly to this email.`,
-};
+    };
 
     // Send both emails
     await transporter.sendMail(adminMail);
@@ -128,14 +113,13 @@ export async function POST(req: Request) {
 
     return new Response(
       JSON.stringify({ message: "Email sent successfully" }),
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Email error:", error);
 
-    return new Response(
-      JSON.stringify({ message: "Failed to send email" }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ message: "Failed to send email" }), {
+      status: 500,
+    });
   }
 }
