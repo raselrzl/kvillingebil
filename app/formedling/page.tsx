@@ -66,6 +66,7 @@ export default function FormedlingPage() {
               <Image
                 src="/v1.png"
                 alt="Vehicle 1"
+                 sizes="75"
                 fill
                 className="object-cover"
               />
@@ -77,7 +78,9 @@ export default function FormedlingPage() {
                 src="/v2.png"
                 alt="Vehicle 2"
                 fill
-                className="object-cover"
+                sizes="75"
+                loading="eager"
+                className="object-cover"                
               />
             </div>
           </div>
@@ -112,6 +115,7 @@ export default function FormedlingPage() {
                 src="/3.png"
                 alt="Vi erbjuder"
                 fill
+                 sizes="75"
                 className="object-cover"
               />
 

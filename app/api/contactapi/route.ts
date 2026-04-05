@@ -69,21 +69,58 @@ export async function POST(req: Request) {
     };
 
     // Auto-reply email (user receives)
-    const userMail = {
-      from: `"Support" <${process.env.SMTP_USER}>`,
-      to: data.email,
-      subject: "We received your message",
-      html: `
-        <h2>Thank you for contacting us!</h2>
-        <p>Hi ${data.name},</p>
-        <p>We have received your message and will get back to you soon.</p>
-        <br/>
-        <p><strong>Your message:</strong></p>
-        <p>${data.message}</p>
-        <br/>
-        <p>Best regards,<br/>Support Team</p>
-      `,
-    };
+   const userMail = {
+  from: `"Kvillinge Bil" <${process.env.SMTP_USER}>`,
+  to: data.email,
+  subject: "Thank You for Contacting Kvillinge Bil",
+  html: `
+    <div style="font-family: Arial, sans-serif; max-width:600px; margin:auto; padding:25px; border-radius:10px; background:#ffffff; color:#333;">
+      <h2 style="color:#2db1cc; text-align:center; font-size:28px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</h2>
+
+      <p style="font-size:16px; line-height:1.6;">
+        Hi ${data.name},<br/><br/>
+        We have received your message. At <strong>Kvillinge Bil AB</strong>, your inquiry is important to us. 
+        Our team responds based on priority to ensure you receive the attention you deserve.
+      </p>
+
+      <p style="font-size:16px; line-height:1.6; margin-top:10px;">
+        We will review your message carefully and respond as soon as possible. Meanwhile, you can explore our website for more information about our services.
+      </p>
+
+      <p style="font-size:16px; line-height:1.6; margin-top:20px; padding:10px; background:#f9f9f9; border:1px solid #ddd; border-radius:4px; white-space: pre-wrap; word-wrap: break-word;">
+        <strong>Your message:</strong><br/>
+        ${data.message}
+      </p>
+
+      <div style="text-align:center; margin:25px 0;">
+        <a href="https://www.kvillingebil.se" target="_blank" style="background: linear-gradient(90deg, #2db1cc, #249bb3); color:#fff; text-decoration:none; padding:12px 25px; border-radius:6px; font-weight:bold; display:inline-block;">
+          Visit Our Website
+        </a>
+      </div>
+
+      <p style="font-size:14px; color:#555; text-align:center; margin-top:15px;">
+        This is an automated response. Please do not reply directly to this email.
+      </p>
+
+      <p style="font-size:14px; color:#888; text-align:center; margin-top:25px;">
+        Best regards,<br/>
+        Kvillinge Bil AB
+      </p>
+
+      <div style="text-align:center; margin-top:25px;">
+        <img src="cid:logo" alt="Kvillinge Bil Logo" style="height:50px;" />
+      </div>
+    </div>
+  `,
+  attachments: [
+    {
+      filename: "logoblack.jpeg",
+      path: "./public/logoblack.jpeg",
+      cid: "logo",
+    },
+  ],
+  text: `Hi ${data.name},\nThank you for contacting Kvillinge Bil! Your inquiry is important to us, and we will respond as soon as possible.\n\nYour message: ${data.message}\n\nThis is an automated response. Please do not reply directly to this email.`,
+};
 
     // Send both emails
     await transporter.sendMail(adminMail);
