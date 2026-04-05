@@ -22,22 +22,22 @@ export default function VehiclesPage() {
         {/* ✅ NEW VEHICLES CAROUSEL */}
         <NewVehiclesCarousel vehicles={vehicles} />
 
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase md:text-right">
+        <section className="max-w-7xl mx-auto px-6 pt-10">
+          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase mb-4">
             Husbilar
           </h2>
           <HusbilarSlider vehicles={getByCategory(vehicles, "Husbilar")} />
         </section>
 
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase md:text-right">
+        <section className="max-w-7xl mx-auto px-6 pt-10">
+          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase mb-4">
             Husvagnar
           </h2>
           <HusvagnarSlider vehicles={getByCategory(vehicles, "Husvagnar")} />
         </section>
 
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase md:text-right">
+        <section className="max-w-7xl mx-auto px-6 pt-10 mb-4">
+          <h2 className="text-3xl font-bold text-[#2db1cc] uppercase">
             Veteranbilar
           </h2>
           <VeteranbilarSlider

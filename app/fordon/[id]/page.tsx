@@ -103,7 +103,7 @@ export default function VehicleDetailPage() {
             <div
               key={i}
               onClick={() => setSelectedImage(img)}
-              className={`relative w-10 h-10 overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#2db1cc]" : "border-transparent"}`}
+              className={`relative w-7 h-10 overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#2db1cc]" : "border-transparent"}`}
             >
               <Image
                 src={img}
@@ -119,13 +119,13 @@ export default function VehicleDetailPage() {
         {/* Info */}
         <div className="mt-10 md:flex md:justify-between md:items-start md:space-x-16">
           <div className="space-y-5 md:flex-1">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+            <h1 className="text-xl md:text-5xl font-extrabold text-gray-900 font-inter uppercase">
               {vehicle.title}
             </h1>
             <p className="text-[#2db1cc] font-extrabold text-3xl">
               {vehicle.price}
             </p>
-            <p className="text-gray-700 text-lg">{vehicle.details}</p>
+            <p className="text-black text-lg font-bold">{vehicle.details}</p>
             {vehicle.description && (
               <p className="mt-4 text-gray-600">{vehicle.description}</p>
             )}
@@ -136,9 +136,9 @@ export default function VehicleDetailPage() {
                 {Object.entries(vehicle.specs).map(([key, value]) => (
                   <li
                     key={key}
-                    className="flex justify-between items-center bg-white/80 backdrop-blur-md px-4 py-3 shadow-sm shadow-[#2db1cc] hover:shadow-md transition"
+                    className="flex justify-between items-center bg-white/80 backdrop-blur-md px-2 py-3 shadow-sm shadow-[#2db1cc] hover:shadow-md transition"
                   >
-                    <span className="text-gray-500 text-xs md:text-sm capitalize">
+                    <span className="text-gray-500 text-[10px] md:text-sm capitalize">
                       {key}
                     </span>
 
@@ -151,7 +151,7 @@ export default function VehicleDetailPage() {
             )}
           </div>
 
-          <div className="mt-6 md:mt-0">
+          <div className="mt-14 md:mt-0">
             <Link
               href="/kontakt"
               className="bg-linear-to-r from-black to-[#2db1cc] text-white px-8 py-4 rounded-full shadow-xl font-semibold hover:shadow-2xl"
