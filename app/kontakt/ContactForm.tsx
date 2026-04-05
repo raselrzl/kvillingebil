@@ -71,7 +71,7 @@ export default function ContactForm() {
 
   return (
     <section className="font-inter w-full px-4 sm:px-6 md:px-8">
-      <div className="max-w-2xl mx-auto bg-white pb-8 px-4 shadow p-4 ">
+      <div className="max-w-2xl mx-auto bg-white pb-8 px-4 shadow p-4 rounded-2xl">
         <div className="text-center py-10">
           <h1 className="text-xl sm:text-2xl font-extrabold uppercase tracking-wider text-black">
             Contact Us
@@ -89,7 +89,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           id="contact-booking"
         >
-          <div className="flex items-center gap-3 bg-gray-100 p-3">
+          <div className="flex items-center gap-3 bg-gray-100 p-3 rounded-2xl">
             <User className="w-5 h-5 text-gray-500" />
             <input
               type="text"
@@ -102,7 +102,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 p-3">
+          <div className="flex items-center gap-3 bg-gray-100 p-3 rounded-2xl">
             <Mail className="w-5 h-5 text-gray-500 Plats:text-gray-300" />
             <input
               type="email"
@@ -115,7 +115,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-center gap-3 bg-gray-100 p-3">
+          <div className="flex items-center gap-3 bg-gray-100 p-3 rounded-2xl">
             <Edit3 className="w-5 h-5 text-gray-500 " />
             <input
               type="text"
@@ -128,7 +128,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="flex items-start gap-3 bg-gray-100 p-3">
+          <div className="flex items-start gap-3 bg-gray-100 p-3 rounded-2xl">
             <MessageCircle className="w-5 h-5 text-gray-500 mt-1" />
             <textarea
               name="message"
@@ -152,14 +152,14 @@ export default function ContactForm() {
             Jag godkänner webbplatsens integritetspolicy.
           </label>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ">
             <span className="text-gray-700 text-xs">4 + 1 =</span>
             <input
               type="text"
               name="captcha"
               value={formData.captcha}
               onChange={handleChange}
-              className="flex-1 bg-gray-100 p-3 outline-none text-gray-900 text-xs"
+              className="flex-1 bg-gray-100 p-3 outline-none text-gray-900 text-xs rounded-2xl"
               required
             />
           </div>
