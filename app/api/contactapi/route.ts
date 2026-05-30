@@ -68,7 +68,7 @@ export async function POST(req: Request) {
       subject: "Thank You for Contacting Kvillinge Bil",
       html: `
     <div style="font-family: Arial, sans-serif; max-width:600px; margin:auto; padding:25px; border-radius:10px; background:#ffffff; color:#333;">
-      <h2 style="color:#2db1cc; text-align:center; font-size:28px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</h2>
+      <h2 style="color:#5a6249; text-align:center; font-size:28px; margin-bottom:15px;">Thank You for Contacting Kvillinge Bil!</h2>
 
       <p style="font-size:16px; line-height:1.6;">
         Hi ${data.name},<br/><br/>
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
       </p>
 
       <div style="text-align:center; margin:25px 0;">
-        <a href="https://www.kvillingebil.se" target="_blank" style="background: linear-gradient(90deg, #2db1cc, #249bb3); color:#fff; text-decoration:none; padding:12px 25px; border-radius:6px; font-weight:bold; display:inline-block;">
+        <a href="https://www.kvillingebil.se" target="_blank" style="background: linear-gradient(90deg, #5a6249, #249bb3); color:#fff; text-decoration:none; padding:12px 25px; border-radius:6px; font-weight:bold; display:inline-block;">
           Visit Our Website
         </a>
       </div>

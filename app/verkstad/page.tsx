@@ -44,7 +44,7 @@ export default function WorkshopPagePremium() {
             Boka din husbil eller husvagn för professionell service och
             reparation. Vi tar hand om allt!
           </p>
-          <div className="w-24 h-1 bg-linear-to-r from-[#2db1cc] to-[#249bb3] mx-auto mt-6 rounded-full" />
+          <div className="w-24 h-1 bg-linear-to-r from-[#5a6249] to-[#249bb3] mx-auto mt-6 rounded-full" />
         </motion.div>
       </section>
 
@@ -75,7 +75,7 @@ export default function WorkshopPagePremium() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="relative p-px bg-linear-to-br from-[#2db1cc]/40 via-transparent to-[#36b795]/40 shadow-2xl"
+            className="relative p-px bg-linear-to-br from-[#5a6249]/40 via-transparent to-[#36b795]/40 shadow-2xl"
           >
             <div className="bg-white/80 backdrop-blur-xl border border-white/40 p-8 sm:p-12 space-y-6">
               {/* Accent line */}
@@ -102,7 +102,7 @@ export default function WorkshopPagePremium() {
       {/* SERVICES  */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-inter text-[#2db1cc] uppercase">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-inter text-[#5a6249] uppercase">
             Våra tjänster
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -114,7 +114,7 @@ export default function WorkshopPagePremium() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white shadow-lg p-6 flex items-start gap-4 hover:scale-105 transition-transform cursor-default"
               >
-                <div className="shrink-0 w-10 h-10 rounded-full bg-linear-to-br from-[#2db1cc] to-[#249bb3] flex items-center justify-center text-white font-bold">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-linear-to-br from-[#5a6249] to-[#249bb3] flex items-center justify-center text-white font-bold">
                   ✓
                 </div>
                 <p className="text-gray-700 font-medium">{service}</p>
@@ -160,7 +160,7 @@ export default function WorkshopPagePremium() {
           </p>
           <Link
             href="/kontakt#contact-booking"
-            className="bg-linear-to-r from-black to-[#2db1cc] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg"
+            className="bg-linear-to-r from-black to-[#5a6249] hover:from-[#249bb3] hover:to-[#1d8a9e] text-white font-semibold px-6 py-3 rounded-full text-base sm:text-lg transition-all shadow-lg"
           >
             Boka service
           </Link>

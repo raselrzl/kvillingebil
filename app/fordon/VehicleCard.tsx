@@ -37,11 +37,11 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
       
       <div className="absolute bottom-15 left-4 bg-black/40 px-4 py-2 shadow-md">
         <h3 className="text-white text-sm">{title}</h3>
-        <p className="text-[#2db1cc] text-xl font-extrabold">{price}</p>
+        <p className="text-[#5a6249] text-xl font-extrabold">{price}</p>
       </div>
 
       {isNew && (
-        <span className="absolute top-4 right-4 bg-linear-to-r from-black to-[#2db1cc] text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+        <span className="absolute top-4 right-4 bg-linear-to-r from-black to-[#5a6249] text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
           NY
         </span>
       )}

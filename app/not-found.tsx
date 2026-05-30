@@ -26,7 +26,7 @@ export default function NotFound() {
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-widest font-inter">
             404
           </h1>
-          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
+          <div className="w-20 h-1 bg-[#5a6249] mx-auto mt-4" />
           <h2 className="mt-6 text-xl md:text-2xl font-semibold">
             Sidan kunde inte hittas
           </h2>
@@ -57,7 +57,7 @@ export default function NotFound() {
 
             <button
               onClick={() => router.back()}
-              className="px-8 py-3 border border-[#2db1cc] hover:border-[#2db1cc] hover:text-[#2db1cc] transition"
+              className="px-8 py-3 border border-[#5a6249] hover:border-[#5a6249] hover:text-[#5a6249] transition"
             >
               Gå tillbaka
             </button>

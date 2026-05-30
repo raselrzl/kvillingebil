@@ -26,7 +26,7 @@ export default function CareerPage() {
           </h1>
 
           {/* Accent */}
-          <div className="w-24 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mt-6" />
+          <div className="w-24 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795] mx-auto mt-6" />
 
           <p className="mt-6 text-sm sm:text-base md:text-lg opacity-90 leading-relaxed">
             Vill du arbeta i en professionell och växande verksamhet där kvalitet,
@@ -40,7 +40,7 @@ export default function CareerPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="relative p-px bg-linear-to-r from-[#2db1cc]/30 via-transparent to-[#36b795]/30"
+          className="relative p-px bg-linear-to-r from-[#5a6249]/30 via-transparent to-[#36b795]/30"
         >
           <div className="bg-white shadow-2xl p-8 sm:p-12 space-y-6 border border-gray-200">
             {/* Accent */}
@@ -72,7 +72,7 @@ export default function CareerPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="relative p-px bg-linear-to-r from-[#2db1cc]/30 via-transparent to-[#36b795]/30"
+            className="relative p-px bg-linear-to-r from-[#5a6249]/30 via-transparent to-[#36b795]/30"
           >
             <div className="bg-white shadow-2xl p-8 sm:p-12 space-y-8 border border-gray-200">
               {/* HEADER */}
@@ -156,7 +156,7 @@ export default function CareerPage() {
             Intresserad av att arbeta med oss?
           </h3>
 
-          <div className="w-16 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mb-6" />
+          <div className="w-16 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795] mx-auto mb-6" />
 
           <p className="text-white opacity-90 text-base sm:text-lg leading-relaxed">
             Vi tar gärna emot spontana ansökningar från personer med relevant

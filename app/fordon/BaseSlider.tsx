@@ -96,7 +96,7 @@ const BaseSlider: React.FC<BaseSliderProps> = ({
               })
             }
             className={`w-3 h-3 rounded-full transition-colors ${
-              idx === currentIndex ? "bg-[#2db1cc]" : "bg-gray-300"
+              idx === currentIndex ? "bg-[#5a6249]" : "bg-gray-300"
             }`}
           />
         ))}

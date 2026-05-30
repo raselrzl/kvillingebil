@@ -52,7 +52,7 @@ export default function FormedlingPage() {
           <h1 className="text-2xl sm:text-4xl font-extrabold font-inter tracking-wide uppercase">
             Smidig försäljning av din husbil eller husvagn
           </h1>
-          <div className="w-20 h-1 bg-[#2db1cc] mx-auto mt-4" />
+          <div className="w-20 h-1 bg-[#5a6249] mx-auto mt-4" />
         </motion.div>
       </section>
 
@@ -86,7 +86,7 @@ export default function FormedlingPage() {
           </div>
 
           {/* TEXT CARD */}
-          <div className="relative p-px bg-linear-to-br from-[#2db1cc]/40 via-transparent to-[#36b795]/40 shadow-xl">
+          <div className="relative p-px bg-linear-to-br from-[#5a6249]/40 via-transparent to-[#36b795]/40 shadow-xl">
             <div className="bg-white/80 backdrop-blur-xl border border-white/40 p-6 sm:p-8 space-y-5">
               {/* Accent line */}
               <div className="w-12 h-1 bg-linear-to-r from-black to-[#36b795]" />
@@ -132,7 +132,7 @@ export default function FormedlingPage() {
               {offers.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center bg-[#2db1cc]/20 px-4 py-2 text-sm sm:text-base"
+                  className="flex items-center bg-[#5a6249]/20 px-4 py-2 text-sm sm:text-base"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -142,7 +142,7 @@ export default function FormedlingPage() {
                     className="w-5 h-5 mr-3 shrink-0"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#2db1cc"
+                    stroke="#5a6249"
                     strokeWidth="3"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -182,7 +182,7 @@ export default function FormedlingPage() {
             {buyerBenefits.map((item, index) => (
               <motion.div
                 key={index}
-                className=" border-l-4 bg-[#2db1cc]/20  border-[#2db1cc] px-4 py-2 text-sm sm:text-base"
+                className=" border-l-4 bg-[#5a6249]/20  border-[#5a6249] px-4 py-2 text-sm sm:text-base"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
@@ -218,7 +218,7 @@ export default function FormedlingPage() {
 
             <Link
               href="/kontakt"
-              className="px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+              className="px-8 py-3 bg-linear-to-r from-black to-[#5a6249] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
   hover:from-[#1c86ee] hover:to-black transition duration-300"
             >
               Kontakta oss

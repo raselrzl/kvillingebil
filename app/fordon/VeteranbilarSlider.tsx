@@ -11,7 +11,7 @@ export default function VeteranbilarSlider({
   if (!vehicles || vehicles.length === 0) {
     return (
       <div className="w-full flex justify-center items-center py-20 px-4">
-        <div className="relative max-w-xl w-full p-px bg-linear-to-br from-[#2db1cc]/40 via-transparent to-[#36b795]/40">
+        <div className="relative max-w-xl w-full p-px bg-linear-to-br from-[#5a6249]/40 via-transparent to-[#36b795]/40">
           <div className=" bg-white/80 backdrop-blur-xl border border-white/40 shadow-2xl p-10 text-center">
             {/* Accent line */}
             <div className="w-12 h-1 mx-auto mb-6 bg-linear-to-r from-black to-[#36b795]" />
@@ -27,7 +27,7 @@ export default function VeteranbilarSlider({
             </p>
 
             {/* subtle CTA hint */}
-            <div className="mt-6 text-sm text-[#2db1cc]">Uppdateras löpande</div>
+            <div className="mt-6 text-sm text-[#5a6249]">Uppdateras löpande</div>
           </div>
         </div>
       </div>

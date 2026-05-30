@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-inter uppercase tracking-wide">
             Integritetspolicy
           </h1>
-          <div className="w-24 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mt-6" />
+          <div className="w-24 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795] mx-auto mt-6" />
         </motion.div>
       </section>
 
@@ -118,12 +118,12 @@ export default function PrivacyPolicyPage() {
             key={i}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="relative p-px bg-linear-to-r from-[#2db1cc]/40 via-transparent to-[#36b795]/40"
+            className="relative p-px bg-linear-to-r from-[#5a6249]/40 via-transparent to-[#36b795]/40"
           >
             <div className="bg-white/90 backdrop-blur-md border border-gray-200 p-6 sm:p-8 space-y-4 shadow-lg">
               
               {/* Accent line */}
-              <div className="w-12 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795]" />
+              <div className="w-12 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795]" />
 
               <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 uppercase tracking-wide">
                 {section.title}

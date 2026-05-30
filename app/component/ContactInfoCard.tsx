@@ -15,10 +15,10 @@ export default function ContactInfoCard() {
               alt="Marcus Cederborg"
               width={160}
               height={160}
-              className="object-cover border-2 border-[#2db1cc] shadow-lg"
+              className="object-cover border-2 border-[#5a6249] shadow-lg"
             />
 
-            <h3 className="mt-6 text-xl font-semibold text-[#2db1cc]">
+            <h3 className="mt-6 text-xl font-semibold text-[#5a6249]">
               Marcus Cederborg
             </h3>
             <p className="text-sm text-gray-300">Kontaktperson</p>
@@ -41,20 +41,20 @@ export default function ContactInfoCard() {
               <p className="font-semibold">Kvillinge Bil AB</p>
 
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Phone className="w-4 h-4 text-[#2db1cc]" />
+                <Phone className="w-4 h-4 text-[#5a6249]" />
                 <a
                   href="tel:011215600"
-                  className="hover:text-[#2db1cc] transition"
+                  className="hover:text-[#5a6249] transition"
                 >
                   011 21 56 00
                 </a>
               </div>
 
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <Mail className="w-4 h-4 text-[#2db1cc]" />
+                <Mail className="w-4 h-4 text-[#5a6249]" />
                 <a
                   href="mailto:info@kvillingebil.se"
-                  className="hover:text-[#2db1cc] transition"
+                  className="hover:text-[#5a6249] transition"
                 >
                   info@kvillingebil.se
                 </a>
@@ -65,8 +65,8 @@ export default function ContactInfoCard() {
             <div className="pt-4">
               <a
                 href="tel:011215600"
-                className="px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
-  hover:from-[#1c86ee] hover:to-black transition duration-300"
+                className="px-8 py-3 bg-linear-to-r from-black to-[#5a6249] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+hover:from-[#5a62] hover:to-black transition duration-300"
               >
                 Ring direkt
               </a>

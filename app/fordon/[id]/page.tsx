@@ -72,7 +72,7 @@ export default function VehicleDetailPage() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link
           href="/fordon"
-          className="text-gray-100 px-2 py-0.5 hover:underline mb-6 inline-block bg-[#2db1cc]"
+          className="text-gray-100 px-2 py-0.5 hover:underline mb-6 inline-block bg-[#5a6249]"
         >
           ← Tillbaka till fordon
         </Link>
@@ -91,7 +91,7 @@ export default function VehicleDetailPage() {
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
           {vehicle.isNew && (
-            <span className="absolute top-6 right-6 bg-linear-to-r from-black to-[#2db1cc] text-white px-6 py-1 rounded-full text-xl font-bold">
+            <span className="absolute top-6 right-6 bg-linear-to-r from-black to-[#5a6249] text-white px-6 py-1 rounded-full text-xl font-bold">
               NY
             </span>
           )}
@@ -103,7 +103,7 @@ export default function VehicleDetailPage() {
             <div
               key={i}
               onClick={() => setSelectedImage(img)}
-              className={`relative w-7 h-10 overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#2db1cc]" : "border-transparent"}`}
+              className={`relative w-7 h-10 overflow-hidden cursor-pointer border-2 ${selectedImage === img ? "border-[#5a6249]" : "border-transparent"}`}
             >
               <Image
                 src={img}
@@ -122,7 +122,7 @@ export default function VehicleDetailPage() {
             <h1 className="text-xl md:text-5xl font-extrabold text-gray-900 font-inter uppercase">
               {vehicle.title}
             </h1>
-            <p className="text-[#2db1cc] font-extrabold text-3xl">
+            <p className="text-[#5a6249] font-extrabold text-3xl">
               {vehicle.price}
             </p>
             <p className="text-black text-lg font-bold">{vehicle.details}</p>
@@ -136,7 +136,7 @@ export default function VehicleDetailPage() {
                 {Object.entries(vehicle.specs).map(([key, value]) => (
                   <li
                     key={key}
-                    className="flex justify-between items-center bg-white/80 backdrop-blur-md px-2 py-3 shadow-sm shadow-[#2db1cc] hover:shadow-md transition"
+                    className="flex justify-between items-center bg-white/80 backdrop-blur-md px-2 py-3 shadow-sm shadow-[#5a6249] hover:shadow-md transition"
                   >
                     <span className="text-gray-500 text-[10px] md:text-sm capitalize">
                       {key}
@@ -154,7 +154,7 @@ export default function VehicleDetailPage() {
           <div className="mt-14 md:mt-0">
             <Link
               href="/kontakt"
-              className="bg-linear-to-r from-black to-[#2db1cc] text-white px-8 py-4 rounded-full shadow-xl font-semibold hover:shadow-2xl"
+              className="bg-linear-to-r from-black to-[#5a6249] text-white px-8 py-4 rounded-full shadow-xl font-semibold hover:shadow-2xl"
             >
               Kontakta oss
             </Link>
@@ -164,7 +164,7 @@ export default function VehicleDetailPage() {
         {/* Related */}
         {relatedVehicles.length > 0 && (
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-[#2db1cc] uppercase md:text-right">
+            <h2 className="text-3xl font-bold text-[#5a6249] uppercase md:text-right">
               Se mer
             </h2>
             {renderSlider()}

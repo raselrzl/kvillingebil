@@ -26,7 +26,7 @@ export default function Navbar() {
 
   const linkClasses = (href: string) =>
     `transition-colors ${
-      pathname === href ? "text-[#2db1cc]" : "text-white hover:text-gray-300"
+      pathname === href ? "text-[#5a6249]" : "text-white hover:text-gray-300"
     }`;
 
   return (

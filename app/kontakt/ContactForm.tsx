@@ -77,7 +77,7 @@ export default function ContactForm() {
             Contact Us
           </h1>
 
-          <div className="w-24 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mt-6" />
+          <div className="w-24 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795] mx-auto mt-6" />
 
           <p className="mt-4 text-gray-600 max-w-xl mx-auto text-xs md:text-base leading-relaxed">
             You are always welcome to contact us. Fill out the form below and we
@@ -166,8 +166,8 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full px-8 py-3 bg-linear-to-r from-black to-[#00bfff] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
-  hover:from-[#1c86ee] hover:to-black transition duration-300"
+            className="w-full px-8 py-3 bg-linear-to-r from-black to-[#5a6249] text-white border border-transparent text-sm uppercase tracking-wide rounded-full 
+hover:from-[#5a62] hover:to-black transition duration-300"
           >
             Skicka
           </button>

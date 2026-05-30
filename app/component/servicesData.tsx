@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import {
-  Phone,
   ChevronRight,
   ChevronLeft,
   CircleFadingPlus,
@@ -24,7 +23,7 @@ type ServiceItem = {
 const servicesData: ServiceItem[] = [
   {
     title: "Husvagnar",
-    icon: <Truck className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <Truck className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Stort utbud av nya och begagnade husvagnar",
       "För alla behov och budgetar",
@@ -32,7 +31,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Husbilar",
-    icon: <Car className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <Car className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Bekväma och fullt utrustade husbilar",
       "Frihet att resa när du vill",
@@ -40,7 +39,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Inköp",
-    icon: <BadgeDollarSign className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <BadgeDollarSign className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Vi köper ditt fordon snabbt",
       "Trygg och smidig affär",
@@ -48,7 +47,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Inbyte",
-    icon: <Circle className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <Circle className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Byt in ditt fordon hos oss",
       "Enkel lösning vid köp av nytt",
@@ -56,7 +55,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Försäljning",
-    icon: <BadgeDollarSign className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <BadgeDollarSign className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Sälj ditt fordon enkelt",
       "Vi hanterar hela processen",
@@ -64,7 +63,7 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Förmedling",
-    icon: <MessagesSquare className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <MessagesSquare className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Vi säljer ditt fordon åt dig",
       "Maximera värdet utan stress",
@@ -72,13 +71,12 @@ const servicesData: ServiceItem[] = [
   },
   {
     title: "Verkstad",
-    icon: <ShieldCheck className="w-10 h-10 text-[#2db1cc]" />,
+    icon: <ShieldCheck className="w-10 h-10 text-[#4d5946]" />,
     points: [
       "Service och reparationer",
       "Erfarna tekniker du kan lita på",
     ],
   },
-  
 ];
 
 export default function ServicesSlider() {
@@ -91,9 +89,11 @@ export default function ServicesSlider() {
 
   useEffect(() => {
     const firstChild = carouselRef.current?.children[0] as HTMLElement;
+
     if (firstChild) {
       const width = firstChild.clientWidth + 24;
       setCardWidth(width);
+
       carouselRef.current!.scrollLeft = middleIndexOffset * width;
       setActiveIndex(0);
     }
@@ -103,26 +103,30 @@ export default function ServicesSlider() {
     if (!carouselRef.current || !cardWidth) return;
 
     let newIndex = activeIndex + (direction === "right" ? 1 : -1);
+
     const normalizedIndex =
       (newIndex + servicesData.length) % servicesData.length;
+
     setActiveIndex(normalizedIndex);
 
-    const currentScroll = carouselRef.current.scrollLeft;
-    const scrollAmount = direction === "right" ? cardWidth : -cardWidth;
-
     carouselRef.current.scrollTo({
-      left: currentScroll + scrollAmount,
+      left:
+        carouselRef.current.scrollLeft +
+        (direction === "right" ? cardWidth : -cardWidth),
       behavior: "smooth",
     });
   };
 
   useEffect(() => {
     const carousel = carouselRef.current;
+
     if (!carousel) return;
 
     let timeout: any;
+
     const handleScrollEnd = () => {
       clearTimeout(timeout);
+
       timeout = setTimeout(() => {
         if (carousel.scrollLeft <= 0) {
           carousel.scrollLeft += servicesData.length * cardWidth;
@@ -136,35 +140,48 @@ export default function ServicesSlider() {
     };
 
     carousel.addEventListener("scroll", handleScrollEnd);
-    return () => carousel.removeEventListener("scroll", handleScrollEnd);
+
+    return () =>
+      carousel.removeEventListener("scroll", handleScrollEnd);
   }, [cardWidth]);
 
   return (
-    <section className="py-10 bg-gray-100 font-inter">
+    <section className="py-20 bg-[#f7f6f3]">
       <div className="max-w-7xl mx-auto px-6 relative">
-
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl uppercase text-[#2db1cc]">Vi erbjuder</h2>
-          <p className="text-gray-500 mt-2 text-sm">
+        <div className="text-center mb-14">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#4d5946]/60">
+            våra tjänster
+          </p>
+
+          <h2 className="text-2xl md:text-4xl font-light text-[#4d5946] mt-3">
+            Vi hjälper dig hela vägen
+          </h2>
+
+          <p className="text-[#4d5946]/70 mt-4 text-sm">
             Allt inom husbilar, husvagnar och fordonstjänster
           </p>
         </div>
 
         <div className="relative">
-          {/* Arrows */}
+          {/* Left Arrow */}
           <button
             onClick={() => scrollToIndex("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-20 hover:bg-gray-100 transition"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20
+            bg-white border border-[#4d5946]/10 shadow-sm
+            p-2 rounded hover:shadow-md transition"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 text-[#4d5946]" />
           </button>
 
+          {/* Right Arrow */}
           <button
             onClick={() => scrollToIndex("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-20 hover:bg-gray-100 transition"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20
+            bg-white border border-[#4d5946]/10 shadow-sm
+            p-2 rounded hover:shadow-md transition"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ChevronRight className="w-5 h-5 text-[#4d5946]" />
           </button>
 
           {/* Carousel */}
@@ -184,15 +201,26 @@ export default function ServicesSlider() {
               {extendedData.map((item, index) => (
                 <div
                   key={index}
-                  className="w-70 h-80 bg-white border border-[#2db1cc]/70 shadow-md snap-start shrink-0 flex flex-col items-start p-6 transition hover:shadow-xl hover:-translate-y-1"
+                  className="
+                  w-72 h-80
+                  bg-white
+                  border border-[#4d5946]/10
+                  rounded
+                  snap-start
+                  shrink-0
+                  flex flex-col
+                  p-6
+                  transition
+                  hover:shadow-lg
+                "
                 >
                   <div className="mb-6">{item.icon}</div>
 
-                  <h3 className="text-xl font-semibold mb-4">
+                  <h3 className="text-xl font-medium text-[#4d5946] mb-4">
                     {item.title}
                   </h3>
 
-                  <ul className="space-y-2 text-gray-600 text-sm list-disc list-inside">
+                  <ul className="space-y-2 text-[#4d5946]/70 text-sm">
                     {item.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}
@@ -205,12 +233,15 @@ export default function ServicesSlider() {
           {/* Indicators */}
           <div className="flex justify-center mt-8 gap-3 flex-wrap">
             {servicesData.map((_, index) => (
-              <button key={index} onClick={() => scrollToIndex("right")}>
+              <button
+                key={index}
+                onClick={() => scrollToIndex("right")}
+              >
                 <CircleFadingPlus
-                  className={`w-4 h-4 ${
+                  className={`w-4 h-4 transition ${
                     activeIndex === index
-                      ? "text-[#2db1cc] scale-110"
-                      : "text-gray-300"
+                      ? "text-[#4d5946] scale-110"
+                      : "text-[#4d5946]/20"
                   }`}
                 />
               </button>

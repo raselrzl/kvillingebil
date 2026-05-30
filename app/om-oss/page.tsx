@@ -28,7 +28,7 @@ export default function AboutUsPage() {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide uppercase">
             Om oss
           </h1>
-          <div className="w-20 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795] mx-auto mt-4" />
+          <div className="w-20 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795] mx-auto mt-4" />
         </motion.div>
       </section>
 
@@ -51,12 +51,12 @@ export default function AboutUsPage() {
             <div className="bg-white shadow-xl p-8 sm:p-10 space-y-6 border border-gray-200">
 
               {/* Accent */}
-              <div className="w-14 h-0.5 bg-linear-to-r from-[#2db1cc] to-[#36b795]" />
+              <div className="w-14 h-0.5 bg-linear-to-r from-[#5a6249] to-[#36b795]" />
 
               {/* Heading */}
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 leading-snug uppercase">
                 Frihet på vägarna med{" "}
-                <span className="text-[#2db1cc]">Kvillinge Bil</span>
+                <span className="text-[#5a6249]">Kvillinge Bil</span>
               </h2>
 
               {/* Intro */}
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
               </p>
 
               {/* Highlight */}
-              <div className="bg-[#2db1cc]/10 border-l-4 border-[#2db1cc] p-4">
+              <div className="bg-[#5a6249]/10 border-l-4 border-[#5a6249] p-4">
                 <p className="font-semibold text-gray-800">
                   Välkommen till Kvillinge Bil – låt oss ta hand om din nästa resa!
                 </p>
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
               <div className="pt-2">
                 <a
                   href="/kontakt"
-                  className="inline-block px-8 py-3 bg-linear-to-r from-black to-[#2db1cc] text-white text-sm font-medium shadow-lg hover:bg-[#249bb3] transition"
+                  className="inline-block px-8 py-3 bg-linear-to-r from-black to-[#5a6249] text-white text-sm font-medium shadow-lg hover:bg-[#249bb3] transition"
                 >
                   Kontakta oss
                 </a>
@@ -117,15 +117,15 @@ export default function AboutUsPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center shadow-[#2db1cc] hover:-translate-y-2"
+                className="group bg-white shadow-sm hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center shadow-[#5a6249] hover:-translate-y-2"
               >
                 {/* Number */}
-                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-black to-[#2db1cc] text-transparent bg-clip-text">
+                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-black to-[#5a6249] text-transparent bg-clip-text">
                   {item.number}
                 </h3>
 
                 {/* Divider */}
-                <div className="w-10 h-0.5 bg-[#2db1cc] my-4 group-hover:w-16 transition-all duration-300"></div>
+                <div className="w-10 h-0.5 bg-[#5a6249] my-4 group-hover:w-16 transition-all duration-300"></div>
 
                 {/* Label */}
                 <p className="text-gray-600 text-sm md:text-base text-center">
