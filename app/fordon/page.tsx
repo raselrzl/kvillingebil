@@ -8,7 +8,7 @@ import VeteranbilarSlider from "./VeteranbilarSlider";
 export default function VehiclesPage() {
   return (
     <>
-    {/*   <section className="relative font-inter w-full h-130 sm:h-140 lg:h-170 flex items-center justify-center overflow-hidden bg-black">
+      {/*   <section className="relative font-inter w-full h-130 sm:h-140 lg:h-170 flex items-center justify-center overflow-hidden bg-black">
         <video
           src="/pcon.mp4"
           autoPlay
@@ -18,10 +18,8 @@ export default function VehiclesPage() {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
       </section> */}
-      <div className="font-inter bg-gray-50 min-h-screen">
-        {/* ✅ NEW VEHICLES CAROUSEL */}
-        <NewVehiclesCarousel vehicles={vehicles} />
-
+      <NewVehiclesCarousel vehicles={vehicles} />
+      <div className="font-inter bg-gray-50 min-h-screen py-10">
         <section className="max-w-7xl mx-auto px-6 pt-10">
           <h2 className="text-3xl font-bold text-[#2db1cc] uppercase mb-4">
             Husbilar
@@ -36,14 +34,14 @@ export default function VehiclesPage() {
           <HusvagnarSlider vehicles={getByCategory(vehicles, "Husvagnar")} />
         </section>
 
-        <section className="max-w-7xl mx-auto px-6 pt-10 mb-4">
+        {/*        <section className="max-w-7xl mx-auto px-6 pt-10 mb-4">
           <h2 className="text-3xl font-bold text-[#2db1cc] uppercase">
             Veteranbilar
           </h2>
           <VeteranbilarSlider
             vehicles={getByCategory(vehicles, "Veteranbilar")}
           />
-        </section>
+        </section> */}
       </div>
     </>
   );

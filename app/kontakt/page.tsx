@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 import ContactInfoCard from "../component/ContactInfoCard";
+import ServicesSlider from "../component/servicesData";
+import CategoryLink from "../component/categoryLink";
 
 export default function ContactOssPage() {
   return (
@@ -37,6 +39,35 @@ export default function ContactOssPage() {
       <section className="py-10 bg-gray-50">
         <ContactForm />
       </section>
+       <section className="pb-20 bg-linear-to-b from-white to-gray-50 font-inter">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { number: "10+", label: "År erfarenhet" },
+              { number: "100+", label: "Sålda fordon" },
+              { number: "100%", label: "Personlig service" },
+              { number: "∞", label: "Resmöjligheter" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white shadow-md hover:shadow-xl shadow-[#1e90ff] transition-all duration-300 p-8 flex flex-col items-center border border-[#1e90ff]/20 hover:-translate-y-2"
+              >
+                <h3 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-black to-[#1e90ff] text-transparent bg-clip-text">
+                  {item.number}
+                </h3>
+
+                <div className="w-10 h-0.5 bg-[#2db1cc] my-4 group-hover:w-16 transition-all duration-300"></div>
+
+                <p className="text-gray-600 text-sm md:text-base text-center">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <ServicesSlider />
+      <CategoryLink />
     </div>
   );
 }

@@ -6,15 +6,16 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import SocialLinks from "./SocialLinks";
 
 const Footer: React.FC = () => {
-  // ✅ Reusable scroll-to-top handler
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="w-full bg-black text-white px-2 font-inter">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <footer className="w-full bg-[#eeebe6] text-[#4d5946] px-2 font-inter">
+      
+      <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Logo */}
           <Image
             src="/logo.png"
@@ -27,10 +28,13 @@ const Footer: React.FC = () => {
 
           {/* Address */}
           <div>
-            <h3 className="text-sm font-bold mb-2">Kvillinge bil AB</h3>
-            <div className="flex items-start gap-2">
-              <MapPin size={14} className="text-gray-100 mt-1" />
-              <p className="text-xs text-gray-300 leading-relaxed">
+            <h3 className="text-sm font-bold mb-2 text-[#4d5946]">
+              Kvillinge bil AB
+            </h3>
+
+            <div className="flex items-start gap-2 text-[#4d5946]/80">
+              <MapPin size={14} className="mt-1" />
+              <p className="text-xs leading-relaxed">
                 LIDA 1
                 <br />
                 60599 Åby, Norrköping
@@ -40,11 +44,13 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-bold mb-4">Kontakt</h3>
+            <h3 className="text-sm font-bold mb-4 text-[#4d5946]">
+              Kontakt
+            </h3>
 
             <a
               href="mailto:info@kvillingebil.se"
-              className="flex items-center gap-2 mt-2 text-xs text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 mt-2 text-xs text-[#4d5946]/80 underline hover:text-[#4d5946] transition"
             >
               <Mail size={14} />
               info@kvillingebil.se
@@ -52,7 +58,7 @@ const Footer: React.FC = () => {
 
             <a
               href="tel:011215600"
-              className="flex items-center gap-2 text-xs text-gray-300 underline hover:text-white transition"
+              className="flex items-center gap-2 text-xs text-[#4d5946]/80 underline hover:text-[#4d5946] transition"
             >
               <Phone size={14} />
               011215600
@@ -61,12 +67,14 @@ const Footer: React.FC = () => {
 
           {/* Info Links */}
           <div>
-            <h3 className="text-sm font-bold mb-2">Info</h3>
+            <h3 className="text-sm font-bold mb-2 text-[#4d5946]">
+              Info
+            </h3>
 
             <Link
               href="/privacy-policy"
               onClick={handleScrollTop}
-              className="block text-gray-300 underline text-xs font-bold hover:text-white transition"
+              className="block text-xs font-bold text-[#4d5946]/80 underline hover:text-[#4d5946] transition"
             >
               Integritetspolicy
             </Link>
@@ -74,7 +82,7 @@ const Footer: React.FC = () => {
             <Link
               href="/kontakt"
               onClick={handleScrollTop}
-              className="block text-xs font-bold text-gray-300 underline hover:text-white transition"
+              className="block text-xs font-bold text-[#4d5946]/80 underline hover:text-[#4d5946] transition"
             >
               Boka tid
             </Link>
@@ -82,7 +90,7 @@ const Footer: React.FC = () => {
             <Link
               href="/om-oss"
               onClick={handleScrollTop}
-              className="block text-xs font-bold text-gray-300 underline hover:text-white transition"
+              className="block text-xs font-bold text-[#4d5946]/80 underline hover:text-[#4d5946] transition"
             >
               Om oss
             </Link>
@@ -90,7 +98,7 @@ const Footer: React.FC = () => {
             <Link
               href="/karriar"
               onClick={handleScrollTop}
-              className="block text-xs font-bold text-gray-300 underline hover:text-white transition mb-4"
+              className="block text-xs font-bold text-[#4d5946]/80 underline hover:text-[#4d5946] transition mb-4"
             >
               Karriärmöjligheter
             </Link>
@@ -99,8 +107,9 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-800 py-1 text-[10px] text-gray-500">
+      <div className="border-t border-[#4d5946]/20 py-3 text-[10px] text-[#4d5946]/60">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+
           <div />
 
           {/* Social Links */}
@@ -109,13 +118,13 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Copyright */}
-          <p className="order-2 md:order-1 text-gray-500 text-[10px] text-center md:text-left">
+          <p className="order-2 md:order-1 text-center md:text-left">
             © {new Date().getFullYear()} Kvillinge bil AB{" "}
             <a
               href="https://www.souveral.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-white transition"
+              className="underline hover:text-[#4d5946] transition"
             >
               Support
             </a>

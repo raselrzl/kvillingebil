@@ -28,7 +28,7 @@ export default function SocialLinks() {
             rel="noopener noreferrer"
             className="flex items-center justify-center p-1 hover:scale-110 transition-transform duration-300"
           >
-            <Icon className="w-6 h-6 text-white" />
+            <Icon className="w-6 h-6 text-[#4d5946]" />
           </a>
         );
       })}

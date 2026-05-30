@@ -32,22 +32,12 @@ export default function Navbar() {
   return (
     <nav
       className={`w-full h-20 sm:h-24 fixed top-0 left-0 z-50 transition-all duration-300 
-      ${scrolled ? "bg-black shadow-md" : "bg-linear-to-b from-black/80 via-black/40 to-transparent"}
+      ${scrolled ? "bg-linear-to-b from-[#5a6249] via-black/40 to-transparent" : ""}
       `}
     >
-      <div className="max-w-7xl mx-auto h-full flex items-center justify-between px-6">
+      <div className="mx-auto h-full flex items-center justify-between px-6">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center md:pl-10"
-          onClick={(e) => {
-            // If already on home page, just scroll to top
-            if (pathname === "/") {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-          }}
-        >
+        <Link href="/" className="flex items-center md:pl-10">
           <Image
             src="/logo.png"
             alt="Logo"
@@ -71,26 +61,32 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Contact Button */}
+        <Link
+          href="/kontakt"
+          className="hidden md:inline-block uppercase m-4 px-3 py-1 rounded
+          bg-[#5a6249]/90 text-white
+          hover:bg-[#4d5946] transition"
+        >
+          kontakta oss
+        </Link>
+
         {/* Mobile Menu Icon */}
         <div
           className="md:hidden w-8 h-4 flex flex-col justify-between items-end cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <motion.span
-            className="h-0.5 w-7.5 bg-white"
+            className="h-0.5 w-7.5 bg-[#4d5946]"
             animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
           />
           <motion.span
-            className="h-0.5 w-5 bg-gray-100"
-            animate={
-              menuOpen
-                ? { rotate: 45, y: 8, backgroundColor: "#2db1cc" }
-                : { rotate: 0, y: 0, backgroundColor: "#2db1cc" }
-            }
+            className="h-0.5 w-5 bg-[#4d5946]"
+            animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="h-0.5 w-6 bg-white"
+            className="h-0.5 w-6 bg-[#4d5946]"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
           />
         </div>
@@ -104,7 +100,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black overflow-hidden mx-8 border-t-4 border-gray-100"
+            className="md:hidden bg-[#5a6249] overflow-hidden mx-8 border-t border-white/20"
           >
             <div className="flex flex-col text-center py-6 gap-6 font-semibold text-sm uppercase">
               {navLinks.map((link) => (
@@ -112,7 +108,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={linkClasses(link.href)}
+                  className="text-white/80 hover:text-white transition"
                 >
                   {link.name}
                 </Link>

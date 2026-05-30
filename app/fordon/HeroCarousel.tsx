@@ -39,10 +39,6 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ vehicles }) => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 shadow-xl flex flex-col md:flex-row md:items-center justify-between">
-                {/*     <div>
-                  <h2 className="font-bold text-2xl md:text-4xl text-gray-900">{v.title}</h2>
-                  <p className="text-[#2db1cc] font-semibold text-lg md:text-2xl mt-1">{v.price}</p>
-                </div> */}
                 {v.isNew && (
                   <span className="mt-4 md:mt-0 md:ml-4 bg-linear-to-r from-black to-[#2db1cc] text-white text-sm md:text-base font-bold px-4 py-2 rounded-full shadow-lg">
                     New Arrival
