@@ -66,8 +66,8 @@ export default function VehicleDetailPage() {
   };
 
   return (
-    <div className="font-inter min-h-screen bg-white">
-      <div className="h-20 sm:h-24 bg-black" />
+    <div className="font-inter min-h-screen bg-[#f7f6f3]">
+      <div className="h-20 sm:h-24 bg-linear-to-b from-[#5a6249] via-black/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link
