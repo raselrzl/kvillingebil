@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import FeaturedVehicles from "./component/FeaturedVehicles";
 import HowItWorks from "./component/HowItWorks";
 import AboutKvillinge from "./component/AboutKvillinge";
+import Link from "next/link";
 
 const HomePage: React.FC = () => {
   return (
@@ -36,13 +37,13 @@ const HomePage: React.FC = () => {
               </p>
 
               <div className="flex md:flex-row flex-col gap-4">
-                <button className="px-3 py-1 bg-[#6F7A4E]/80 rounded text-white w-40">
+                <Link href="/fordon" className="px-3 py-1 bg-white/90 rounded w-40 text-[#5a6249]">
                   Våra fordon
-                </button>
+                </Link>
 
-                <button className="px-3 py-1 border border-white/50 w-40 text-white hover:bg-white hover:text-black transition">
+                <Link href="/kontakt"  className="px-3 py-1 border border-white/50 w-40 text-white hover:bg-white hover:text-black transition">
                   Kontakt oss
-                </button>
+                </Link>
               </div>
             </div>
           </div>

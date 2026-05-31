@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
 
           {/* Logo */}
           <Image
-            src="/logo.png"
+            src="/k.png"
             alt="Logo"
             width={400}
             height={400}
-            className="h-5 w-auto"
+            className="h-10 w-auto"
             loading="eager"
           />
 

@@ -1,3 +1,4 @@
+import AllVehiclesGrid from "../component/AllVehiclesGrid";
 import { vehicles } from "../data/vehicles";
 import { getByCategory } from "../data/vehicleUtils";
 import HusbilarSlider from "./HusbilarSlider";
@@ -19,7 +20,8 @@ export default function VehiclesPage() {
         />
       </section> */}
       <NewVehiclesCarousel vehicles={vehicles} />
-      <div className="font-inter bg-gray-50 min-h-screen py-10">
+      <AllVehiclesGrid />
+    {/*   <div className="font-inter bg-gray-50 min-h-screen py-10">
         <section className="max-w-7xl mx-auto px-6 pt-10">
           <h2 className="text-3xl font-bold text-[#5a6249] uppercase mb-4">
             Husbilar
@@ -32,7 +34,7 @@ export default function VehiclesPage() {
             Husvagnar
           </h2>
           <HusvagnarSlider vehicles={getByCategory(vehicles, "Husvagnar")} />
-        </section>
+        </section> */}
 
         {/*        <section className="max-w-7xl mx-auto px-6 pt-10 mb-4">
           <h2 className="text-3xl font-bold text-[#5a6249] uppercase">
@@ -42,7 +44,7 @@ export default function VehiclesPage() {
             vehicles={getByCategory(vehicles, "Veteranbilar")}
           />
         </section> */}
-      </div>
+   {/*    </div> */}
     </>
   );
 }
